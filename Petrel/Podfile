@@ -3,9 +3,9 @@ use_frameworks!
 
 target 'Petrel' do
 
-pod 'Moya/Rxswift'
-pod 'SwiftyJSON'
-pod "Moya-SwiftyJSONMapper/RXSwift"
-
+  pod 'Moya/RxSwift'
+  pod 'SwiftyJSON'
+  pod "Moya-SwiftyJSONMapper/RxSwift"
+  pod 'RxCocoa'
 end
 
