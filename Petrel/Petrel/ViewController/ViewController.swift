@@ -13,6 +13,7 @@ import RxSwift
 
 enum ItemType {
     case douban(String)
+    case github(String)
 }
 
 
@@ -22,7 +23,8 @@ class ViewController: UIViewController {
     let disposeBag = DisposeBag()
     
     var items: Array<ItemType> {
-        return [.douban("豆瓣音乐")]
+        return [.douban("豆瓣音乐"),
+                .github("GitHub")]
     }
     
     override func viewDidLoad() {
@@ -39,6 +41,8 @@ class ViewController: UIViewController {
             switch element {
             case .douban(let title):
                 cell.textLabel?.text = title
+            case .github(let title):
+                cell.textLabel?.text = title
             }
             cell.accessoryType = .disclosureIndicator
             return cell
@@ -48,6 +52,8 @@ class ViewController: UIViewController {
             switch item {
             case .douban:
                 self?.navigationController?.pushViewController(DouBanViewController(), animated: true)
+            case .github:
+                self?.navigationController?.pushViewController(GitHubViewController(), animated: true)
             }
             }).disposed(by: disposeBag)
         
