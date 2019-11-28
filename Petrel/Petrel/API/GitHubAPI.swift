@@ -14,17 +14,25 @@ let GitHubProvider = MoyaProvider<GitHubAPI>()
 
 public enum GitHubAPI{
     case repositories(String)
+    case verify(String)
 }
 
 extension GitHubAPI: TargetType {
     public var baseURL: URL {
-        return URL(string: "https://api.github.com")!
+        switch self {
+        case .repositories:
+            return URL(string: "https://api.github.com")!
+        case .verify:
+            return URL(string: "https://github.com")!
+        }
     }
     
     public var path: String {
         switch self {
         case .repositories:
             return "/search/repositories"
+        case .verify(let name):
+            return "/\(name)"
         }
     }
     
@@ -44,6 +52,8 @@ extension GitHubAPI: TargetType {
             params["sort"] = "stars"
             params["order"] = "desc"
             return .requestParameters(parameters: params, encoding: URLEncoding.default)
+        case .verify:
+            return .requestPlain
         }
     }
     

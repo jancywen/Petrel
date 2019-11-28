@@ -14,6 +14,7 @@ import RxSwift
 enum ItemType {
     case douban(String)
     case github(String)
+    case signup(String)
 }
 
 
@@ -24,7 +25,8 @@ class ViewController: UIViewController {
     
     var items: Array<ItemType> {
         return [.douban("豆瓣音乐"),
-                .github("GitHub")]
+                .github("GitHub"),
+                .signup("验证注册")]
     }
     
     override func viewDidLoad() {
@@ -39,9 +41,7 @@ class ViewController: UIViewController {
         Signal.just(items).asObservable().bind(to: tableView.rx.items) { (tableView, row, element) in
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
             switch element {
-            case .douban(let title):
-                cell.textLabel?.text = title
-            case .github(let title):
+            case .douban(let title), .github(let title), .signup(let title):
                 cell.textLabel?.text = title
             }
             cell.accessoryType = .disclosureIndicator
@@ -54,6 +54,8 @@ class ViewController: UIViewController {
                 self?.navigationController?.pushViewController(DouBanViewController(), animated: true)
             case .github:
                 self?.navigationController?.pushViewController(GitHubViewController(), animated: true)
+            case .signup:
+                self?.navigationController?.pushViewController(RegisterViewController(), animated: true)
             }
             }).disposed(by: disposeBag)
         
