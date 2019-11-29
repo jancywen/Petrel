@@ -60,11 +60,16 @@ class RegisterViewController: UIViewController {
             self?.signup.alpha = valid ? 1.0 : 0.3
             }).disposed(by: disposeBag)
         
+        viewModel.signingIn.drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
+            .disposed(by: disposeBag)
+        
+        let hub = MBProgressHUD.showAdded(to: self.view, animated: true)
+        viewModel.signingIn.map{!$0}.drive(hub.rx.isHidden).disposed(by: disposeBag)
+        
         viewModel.signupResult.drive(onNext: { (result) in
             self.showMessage("注册 \(result ? "成功" : "失败")")
             }).disposed(by: disposeBag)
  
-        BehaviorRelay
     }
 
     //详细提示框

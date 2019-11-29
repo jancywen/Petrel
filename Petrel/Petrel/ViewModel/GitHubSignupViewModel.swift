@@ -147,13 +147,14 @@ class GitHubSignupViewModel {
             username.isValid && password.isValid && repeatedPassword.isValid
         }.distinctUntilChanged()
         
-        signingIn = Driver.just(false)
+        let activityIndicator = ActivityIndicator()
+        signingIn = activityIndicator.asDriver()
         
         let usernameAndPassword = Driver.combineLatest(input.username, input.password) {
             (username: $0, password: $1)
         }
         signupResult = input.loginTaps.withLatestFrom(usernameAndPassword).flatMapLatest({ pari in
-            return GitHubNetworkService.signup(pari.username, password: pari.password)
+            return GitHubNetworkService.signup(pari.username, password: pari.password).trackActivity(activityIndicator)
                 .asDriver(onErrorJustReturn: false)
         })
     }

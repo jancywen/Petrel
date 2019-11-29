@@ -33,7 +33,7 @@ class GitHubViewModel {
         self.searchResult = searchAction
             .filter{!$0.isEmpty}
             .flatMapFirst(GitHubNetworkService.searchRepositories)
-            .share(replay: 1)
+            .share(replay: 1).observeOn(MainScheduler.instance)
         
         self.cleanResult = searchAction.filter{$0.isEmpty}.map{_ in Void()}
         
