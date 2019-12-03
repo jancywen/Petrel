@@ -8,5 +8,6 @@ target 'Petrel' do
   pod "Moya-SwiftyJSONMapper/RxSwift"
   pod 'RxCocoa'
   pod 'MBProgressHUD'
+  pod 'MJRefresh'
 end
 
