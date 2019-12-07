@@ -22,7 +22,7 @@ class RefreshViewController: UIViewController {
         super.viewDidLoad()
 
         self.tableView = UITableView(frame: view.frame, style: .plain)
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+//        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         self.tableView.tableFooterView = UIView()
         self.view.addSubview(tableView)
         
@@ -35,7 +35,8 @@ class RefreshViewController: UIViewController {
             dependency: (disposeBag: disposeBag, networkService: NetworkService()))
         
         viewModel.tableData.asDriver().drive(tableView.rx.items) { (tableView, row, elemet) in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+            let cell = tableView.dequeueCell(UITableViewCell.self)
             cell?.textLabel?.text = "\(row) \(elemet)"
             return cell!
         }.disposed(by: disposeBag)

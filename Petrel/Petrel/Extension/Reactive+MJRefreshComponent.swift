@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import MJRefresh
 
 extension Reactive where Base: MJRefreshComponent {
     

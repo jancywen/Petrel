@@ -10,8 +10,5 @@
 #define Petre_Bridging_Header_h
 
 
-#import "MBProgressHUD.h"
-#import "MJRefresh.h"
-
 
 #endif /* Petre_Bridging_Header_h */
