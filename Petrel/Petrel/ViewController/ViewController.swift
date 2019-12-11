@@ -53,13 +53,21 @@ class ViewController: UIViewController {
         tableView.rx.modelSelected(ItemType.self).subscribe(onNext: { [weak self](item) in
             switch item {
             case .douban:
-                self?.navigationController?.pushViewController(DouBanViewController(), animated: true)
+                let douban = DouBanViewController()
+                douban.hidesBottomBarWhenPushed = true
+                self?.navigationController?.pushViewController(douban, animated: true)
             case .github:
-                self?.navigationController?.pushViewController(GitHubViewController(), animated: true)
+                let github = GitHubViewController()
+                github.hidesBottomBarWhenPushed = true
+                self?.navigationController?.pushViewController(github, animated: true)
             case .signup:
-                self?.navigationController?.pushViewController(RegisterViewController(), animated: true)
+                let register = RegisterViewController()
+                register.hidesBottomBarWhenPushed = true
+                self?.navigationController?.pushViewController(register, animated: true)
             case .refresh:
-                self?.navigationController?.pushViewController(RefreshViewController(), animated: true)
+                let refresh = RefreshViewController()
+                refresh.hidesBottomBarWhenPushed = true
+                self?.navigationController?.pushViewController(refresh, animated: true)
             }
             }).disposed(by: disposeBag)
         
