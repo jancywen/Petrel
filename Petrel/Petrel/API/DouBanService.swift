@@ -8,15 +8,16 @@
 
 import Foundation
 import RxSwift
+import Moya
 
 struct DouBanService {
     /// 获取频道
     static func loadChannels() -> Observable<[Channel]> {
-        return DouBanProvider.rx.request(.channels).map(to: DouBan.self).map{$0.channels}.asObservable()
+        return provider.rx.request(MultiTarget(DouBanAPI.channels)).map(to: DouBan.self).map{$0.channels}.asObservable()
     }
     /// 获取频道歌曲
     static func loadPlayList(channelId: String) -> Observable<Playlist> {
-        return DouBanProvider.rx.request(.playlist(channelId)).map(to: Playlist.self).asObservable()
+        return provider.rx.request(MultiTarget(DouBanAPI.playlist(channelId))).map(to: Playlist.self).asObservable()
     }
     /// 获取频道下的第一首歌
     static func loadFirstSong(channelId: String) -> Observable<Song> {

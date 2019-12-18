@@ -9,6 +9,7 @@
 import Moya
 
 let UploadProvider = MoyaProvider<UploadAPI>()
+let provider = MoyaProvider<MultiTarget>()
 enum UploadAPI {
     case upload(String)
 }

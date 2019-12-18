@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Moya
 
 class UploadViewController: UIViewController {
 
@@ -24,7 +25,7 @@ class UploadViewController: UIViewController {
         let group  = DispatchGroup()
         (data as NSArray).enumerateObjects(options: .concurrent) { (item, index, _) in
             group.enter()
-            UploadProvider.request(.upload(item as! String)) { (result) in
+            provider.request(MultiTarget(UploadAPI.upload(item as! String))) { (result) in
                 group.leave()
                 switch result {
                 case let .success(response):

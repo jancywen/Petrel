@@ -9,10 +9,11 @@
 import Foundation
 import RxSwift
 import Moya_SwiftyJSONMapper
+import Moya
 
 struct GitHubNetworkService {
     static func searchRepositories(query: String) -> Observable<GitHubRepositories> {
-        GitHubProvider.rx.request(.repositories(query))
+        provider.rx.request(MultiTarget(GitHubAPI.verify(query)))
             .filterSuccessfulStatusCodes()
             .map(to: GitHubRepositories.self)
             .asObservable()
@@ -24,7 +25,8 @@ struct GitHubNetworkService {
     
     static func usernameAvailable(_ username: String) -> Observable<Bool>
     {
-        GitHubProvider.rx.request(.verify(username)).map { (response) -> Bool in
+        
+        provider.rx.request(MultiTarget(GitHubAPI.verify(username))).map {(response) -> Bool in
             print("******\n \(response.statusCode) \n********")
             return response.statusCode == 404
             }.asObservable().catchErrorJustReturn(false)
