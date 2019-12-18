@@ -9,5 +9,7 @@ target 'Petrel' do
   pod 'RxCocoa'
   pod 'MBProgressHUD'
   pod 'MJRefresh'
+  pod 'AliyunOSSiOS', :git => 'https://gitee.com/raychow-github/aliyun-oss-ios-sdk.git'
+
 end
 

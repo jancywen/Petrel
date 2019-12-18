@@ -30,8 +30,8 @@ class RefreshViewController: UIViewController {
         self.tableView.mj_footer = MJRefreshAutoStateFooter()
         
         let viewModel = RefreshViewModel(
-            input: (headerRefresh: self.tableView.mj_header.rx.refreshing.asDriver(),
-                    footerRefresh: self.tableView.mj_footer.rx.refreshing.asDriver()),
+            input: (headerRefresh: self.tableView.mj_header!.rx.refreshing.asDriver(),
+                    footerRefresh: self.tableView.mj_footer!.rx.refreshing.asDriver()),
             dependency: (disposeBag: disposeBag, networkService: NetworkService()))
         
         viewModel.tableData.asDriver().drive(tableView.rx.items) { (tableView, row, elemet) in
@@ -41,8 +41,8 @@ class RefreshViewController: UIViewController {
             return cell!
         }.disposed(by: disposeBag)
         
-        viewModel.endHeaderRefreshing.drive(self.tableView.mj_header.rx.endRefreshing).disposed(by: disposeBag)
-        viewModel.endFooterRefreshing.drive(self.tableView.mj_footer.rx.endRefreshing).disposed(by: disposeBag)
+        viewModel.endHeaderRefreshing.drive(self.tableView.mj_header!.rx.endRefreshing).disposed(by: disposeBag)
+        viewModel.endFooterRefreshing.drive(self.tableView.mj_footer!.rx.endRefreshing).disposed(by: disposeBag)
 //        viewModel.endRefreshingWithNoMoreData.drive(onNext: {self.tableView.mj_footer.isHidden = $0}).disposed(by: disposeBag)
         viewModel.endRefreshingWithNoMoreData.drive(onNext: { (noMoreData) in
             if noMoreData {
@@ -51,7 +51,7 @@ class RefreshViewController: UIViewController {
                 footer.endRefreshingWithNoMoreData()
                 self.tableView.mj_footer = footer
             }else {
-                self.tableView.mj_footer.resetNoMoreData()
+                self.tableView.mj_footer!.resetNoMoreData()
             }
             }).disposed(by: disposeBag)
         

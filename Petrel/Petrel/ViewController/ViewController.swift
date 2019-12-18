@@ -16,6 +16,7 @@ enum ItemType {
     case github(String)
     case signup(String)
     case refresh(String)
+    case upload(String)
 }
 
 
@@ -28,7 +29,8 @@ class ViewController: UIViewController {
         return [.douban("豆瓣音乐"),
                 .github("GitHub"),
                 .signup("验证注册"),
-                .refresh("下拉刷新上提加载")]
+                .refresh("下拉刷新上提加载"),
+                .upload("顺序异步上传")]
     }
     
     override func viewDidLoad() {
@@ -43,7 +45,7 @@ class ViewController: UIViewController {
         Signal.just(items).asObservable().bind(to: tableView.rx.items) { (tableView, row, element) in
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
             switch element {
-            case .douban(let title), .github(let title), .signup(let title), .refresh(let title):
+            case .douban(let title), .github(let title), .signup(let title), .refresh(let title), .upload(let title):
                 cell.textLabel?.text = title
             }
             cell.accessoryType = .disclosureIndicator
@@ -68,6 +70,11 @@ class ViewController: UIViewController {
                 let refresh = RefreshViewController()
                 refresh.hidesBottomBarWhenPushed = true
                 self?.navigationController?.pushViewController(refresh, animated: true)
+            case .upload:
+                let upload = UploadViewController()
+                upload.hidesBottomBarWhenPushed = true
+                self?.navigationController?.pushViewController(upload, animated: true)
+                break
             }
             }).disposed(by: disposeBag)
         
