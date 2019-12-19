@@ -11,7 +11,7 @@ import Moya_SwiftyJSONMapper
 import RxSwift
 
 struct OSSNetworkService {
-     func ossAccess() -> Observable<OSSAccessModel> {
+     static func ossAccess() -> Observable<OSSAccessModel> {
         OSSProvider.rx.request(.oss)
             .filterSuccessfulStatusCodes()
             .map(to: OSSAccessModel.self)

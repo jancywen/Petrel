@@ -9,32 +9,51 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import AliyunOSSiOS
 
 class OSSManager {
     
-    let imageUrls: Driver<Array<String>>
-    
-    init(images: Array<UIImage>, dependency:(networkService: OSSNetworkService, disposeBag: DisposeBag)) {
-        
-        func upload(oss: OSSAccessModel) -> Driver<Array<String>> {
-            return Driver.just([""])
-        }
-
-        imageUrls = dependency.networkService.ossAccess().flatMap{OSSManager.upload(oss: $0, images: images)}.asDriver(onErrorJustReturn: [])
+    static func upload(images: [UIImage], completion: @escaping ((Error?,[String]?) -> Void)) {
+        OSSNetworkService.ossAccess().asObservable().subscribe(onNext: { (oss) in
+            OSSManager.upload(oss: oss, images: images, completion: completion)
+        }).dispose()
     }
     
-    
-    static func upload(oss: OSSAccessModel, images: Array<UIImage>) -> Driver<Array<String>> {
+    fileprivate static func upload(oss: OSSAccessModel, images: Array<UIImage>, completion: @escaping ((Error?,[String]?) -> Void)) {
         guard images.count > 0 else {
-            return Driver.just([""])
+            return
         }
 
-        let mutArr = ["a", "b", "c", "d", "e", "f", "g"]
-(mutArr as NSArray).enumerateObjects(options: .reverse, using: { obj, idx, stop in
-
-})
+        let imgNames: NSMutableArray = images.map{String(Int($0.size.width))} as! NSMutableArray
         
-        return Driver.just([""])
-
+        let provider = OSSAuthCredentialProvider(authServerUrl: oss.stsServerUrl)
+        let client = OSSClient(endpoint: oss.endPoint, credentialProvider: provider)
+        
+        let group = DispatchGroup()
+        (images as NSArray).enumerateObjects { (item, index, _) in
+            let put: OSSPutObjectRequest = OSSPutObjectRequest()
+            put.bucketName = oss.bucket
+            let imagename = oss.visitUrl + "liemi/" + NSUUID().uuidString + ".jpg"
+            put.objectKey = imagename
+            put.contentType = "image/jpeg"
+            put.uploadingData = (item as! UIImage).jpegData(compressionQuality: 1)!
+            
+            let putTask = client.putObject(put)
+            group.enter()
+            putTask.continue({ (task) -> Any? in
+                group.leave()
+                if task.error == nil {
+                    imgNames.replaceObject(at: index, with: imagename)
+                }else {
+                    completion(task.error, nil)
+                }
+                return nil
+            }, cancellationToken: nil)
+            
+        }
+        group.notify(queue: .main) {
+            completion(nil, imgNames as? [String])
+        }
     }
+    
 }
