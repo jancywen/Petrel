@@ -9,10 +9,11 @@
 import Foundation
 import Moya_SwiftyJSONMapper
 import RxSwift
+import Moya
 
 struct OSSNetworkService {
      static func ossAccess() -> Observable<OSSAccessModel> {
-        OSSProvider.rx.request(.oss)
+        provider.rx.request(MultiTarget(OSSAPI.oss))
             .filterSuccessfulStatusCodes()
             .map(to: OSSAccessModel.self)
             .asObservable()

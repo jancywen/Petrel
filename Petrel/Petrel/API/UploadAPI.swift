@@ -7,17 +7,17 @@
 //
 
 import Moya
+import RxSwift
 
 let UploadProvider = MoyaProvider<UploadAPI>()
 let provider = MoyaProvider<MultiTarget>()
+
+
 enum UploadAPI {
     case upload(String)
 }
 
 extension UploadAPI: TargetType {
-    var baseURL: URL {
-        return URL(string: "http://127.0.0.1:8067")!
-    }
     
     var path: String {
         switch self {
@@ -25,22 +25,5 @@ extension UploadAPI: TargetType {
             return "/api/upload/\(name)"
         }
     }
-    
-    var method: Method {
-        return .get
-    }
-    
-    var sampleData: Data {
-        return "{}".data(using: .utf8)!
-    }
-    
-    var task: Task {
-        return .requestPlain
-    }
-    
-    var headers: [String : String]? {
-        return nil
-    }
-    
     
 }

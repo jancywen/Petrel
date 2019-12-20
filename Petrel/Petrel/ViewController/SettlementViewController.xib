@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettlementViewController" customModule="Petrel" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="fL1-nw-T8a" id="S7d-3u-a6E"/>
+                <outlet property="totalLabel" destination="gHk-yx-0zk" id="yzO-W1-lDi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fL1-nw-T8a">
+                    <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m1p-hZ-oBR">
+                    <rect key="frame" x="0.0" y="812" width="414" height="84"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAu-Ob-d0d">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfy-wZ-Tjr">
+                                    <rect key="frame" x="294" y="0.0" width="120" height="50"/>
+                                    <color key="backgroundColor" red="0.87450980389999999" green="0.17254901959999999" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="120" id="8p4-IE-8iT"/>
+                                    </constraints>
+                                    <state key="normal" title="去付款"/>
+                                    <connections>
+                                        <action selector="onClickPayment:" destination="-1" eventType="touchUpInside" id="GbC-T2-qzl"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥0.01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHk-yx-0zk">
+                                    <rect key="frame" x="232" y="4" width="47" height="22"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                    <color key="textColor" red="0.87450980389999999" green="0.17254901959999999" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合计:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Caw-K5-gQM">
+                                    <rect key="frame" x="194" y="9" width="33" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请在30分钟内完成付款" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vz6-Od-aN5">
+                                    <rect key="frame" x="153" y="30" width="126" height="15"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="vz6-Od-aN5" firstAttribute="top" secondItem="gHk-yx-0zk" secondAttribute="bottom" constant="4" id="4ti-px-gDO"/>
+                                <constraint firstAttribute="height" constant="50" id="96P-q6-cbo"/>
+                                <constraint firstItem="Nfy-wZ-Tjr" firstAttribute="top" secondItem="mAu-Ob-d0d" secondAttribute="top" id="BUH-8D-QEC"/>
+                                <constraint firstItem="gHk-yx-0zk" firstAttribute="bottom" secondItem="Caw-K5-gQM" secondAttribute="bottom" id="Pyr-YD-6ir"/>
+                                <constraint firstItem="Nfy-wZ-Tjr" firstAttribute="leading" secondItem="gHk-yx-0zk" secondAttribute="trailing" constant="15" id="UMd-w7-nJ9"/>
+                                <constraint firstAttribute="bottom" secondItem="Nfy-wZ-Tjr" secondAttribute="bottom" id="ZDZ-aX-vbo"/>
+                                <constraint firstItem="gHk-yx-0zk" firstAttribute="centerY" secondItem="mAu-Ob-d0d" secondAttribute="centerY" constant="-10" id="dSV-1o-hNm"/>
+                                <constraint firstItem="gHk-yx-0zk" firstAttribute="leading" secondItem="Caw-K5-gQM" secondAttribute="trailing" constant="5" id="hJj-V9-OVA"/>
+                                <constraint firstItem="gHk-yx-0zk" firstAttribute="trailing" secondItem="vz6-Od-aN5" secondAttribute="trailing" id="qXl-NU-qj8"/>
+                                <constraint firstAttribute="trailing" secondItem="Nfy-wZ-Tjr" secondAttribute="trailing" id="unh-Tk-b5Z"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="mAu-Ob-d0d" secondAttribute="trailing" id="LD0-Y9-D6s"/>
+                        <constraint firstItem="mAu-Ob-d0d" firstAttribute="top" secondItem="m1p-hZ-oBR" secondAttribute="top" id="LiO-6i-Rp1"/>
+                        <constraint firstItem="mAu-Ob-d0d" firstAttribute="leading" secondItem="m1p-hZ-oBR" secondAttribute="leading" id="zcp-7Y-0cG"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fL1-nw-T8a" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Aco-XC-OED"/>
+                <constraint firstAttribute="bottom" secondItem="m1p-hZ-oBR" secondAttribute="bottom" id="C5R-Dx-jDr"/>
+                <constraint firstItem="fL1-nw-T8a" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="QAs-nE-oai"/>
+                <constraint firstItem="m1p-hZ-oBR" firstAttribute="top" secondItem="fL1-nw-T8a" secondAttribute="bottom" id="VVh-91-Faw"/>
+                <constraint firstItem="fL1-nw-T8a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XIC-ak-fnc"/>
+                <constraint firstItem="m1p-hZ-oBR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="a1X-CW-ejr"/>
+                <constraint firstAttribute="trailing" secondItem="m1p-hZ-oBR" secondAttribute="trailing" id="cBv-cl-9FM"/>
+                <constraint firstItem="mAu-Ob-d0d" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="n6c-q3-Xj2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="143"/>
+        </view>
+    </objects>
+</document>

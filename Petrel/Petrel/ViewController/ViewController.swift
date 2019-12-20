@@ -12,13 +12,32 @@ import RxSwift
 
 
 enum ItemType {
-    case douban(String)
-    case github(String)
-    case signup(String)
-    case refresh(String)
-    case upload(String)
+    case douban
+    case github
+    case signup
+    case refresh
+    case upload
+    case settlement
 }
 
+extension ItemType {
+    var title: String {
+        switch self {
+        case .douban:
+            return "豆瓣音乐"
+        case .github:
+            return "Github"
+        case .signup:
+            return "注册验证"
+        case .refresh:
+            return "下拉刷新 上提加载"
+        case .upload:
+            return "异步上传 排序"
+        case .settlement:
+            return "商品结算"
+        }
+    }
+}
 
 class ViewController: UIViewController {
 
@@ -26,11 +45,12 @@ class ViewController: UIViewController {
     let disposeBag = DisposeBag()
     
     var items: Array<ItemType> {
-        return [.douban("豆瓣音乐"),
-                .github("GitHub"),
-                .signup("验证注册"),
-                .refresh("下拉刷新上提加载"),
-                .upload("顺序异步上传")]
+        return [.douban,
+                .github,
+                .signup,
+                .refresh,
+                .upload,
+                .settlement ]
     }
     
     override func viewDidLoad() {
@@ -44,10 +64,8 @@ class ViewController: UIViewController {
          
         Signal.just(items).asObservable().bind(to: tableView.rx.items) { (tableView, row, element) in
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
-            switch element {
-            case .douban(let title), .github(let title), .signup(let title), .refresh(let title), .upload(let title):
-                cell.textLabel?.text = title
-            }
+            
+            cell.textLabel?.text = element.title
             cell.accessoryType = .disclosureIndicator
             return cell
         }.disposed(by: disposeBag)
@@ -75,6 +93,11 @@ class ViewController: UIViewController {
                 upload.hidesBottomBarWhenPushed = true
                 self?.navigationController?.pushViewController(upload, animated: true)
                 break
+            case .settlement:
+                let goods = GoodsModel(jsonData: "{}")
+                let settlement = SettlementViewController(goods: goods!)
+                settlement.hidesBottomBarWhenPushed = true
+                self?.navigationController?.pushViewController(settlement, animated: true)
             }
             }).disposed(by: disposeBag)
         

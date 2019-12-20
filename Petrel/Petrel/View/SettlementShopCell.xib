@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="SettlementShopCell" customModule="Petrel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="prB-ed-1d7">
+                        <rect key="frame" x="12" y="12" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="KO2-Ak-f1R"/>
+                            <constraint firstAttribute="width" constant="20" id="YJg-Pc-o7l"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="知味观西湖店" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WO-Ch-S3k">
+                        <rect key="frame" x="44" y="12.5" width="98" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EbL-IC-73S" userLabel="line">
+                        <rect key="frame" x="0.0" y="43.5" width="320" height="0.5"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="oh7-c7-bJd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6WO-Ch-S3k" firstAttribute="leading" secondItem="prB-ed-1d7" secondAttribute="trailing" constant="12" id="9Go-Tn-aS8"/>
+                    <constraint firstAttribute="bottom" secondItem="EbL-IC-73S" secondAttribute="bottom" id="cCs-Sd-CbK"/>
+                    <constraint firstItem="EbL-IC-73S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="cov-MO-3UO"/>
+                    <constraint firstItem="prB-ed-1d7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="iNB-RV-0VD"/>
+                    <constraint firstItem="prB-ed-1d7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="jf2-Gn-v6w"/>
+                    <constraint firstAttribute="trailing" secondItem="EbL-IC-73S" secondAttribute="trailing" id="mxZ-ZC-KvK"/>
+                    <constraint firstItem="6WO-Ch-S3k" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ybM-y0-RXc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="137.68115942028987" y="141.96428571428569"/>
+        </tableViewCell>
+    </objects>
+</document>
