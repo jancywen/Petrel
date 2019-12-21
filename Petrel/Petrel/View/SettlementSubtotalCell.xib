@@ -55,6 +55,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="countLabel" destination="mpK-TW-OLB" id="2To-kS-gQs"/>
+                <outlet property="subtotalLabel" destination="flm-CQ-Jft" id="DsI-Xs-903"/>
+            </connections>
             <point key="canvasLocation" x="139" y="143"/>
         </tableViewCell>
     </objects>

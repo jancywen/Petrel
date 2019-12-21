@@ -16,72 +16,64 @@ class SettlementViewModel {
     
     let dataSource = BehaviorRelay<[SettlementSectionModel]>(value: [])
 
-//    var model = SettlementModel()
-    var settle: Driver<SettlementModel>
-    
-    init(goods: GoodsModel, dependency: (disposeBag: DisposeBag, service: AddressService)) {
-        
-                
-//        let data: [SettlementSectionModel] = [
-//            .address(title: "", items: [.address(nil)]),
-//            .goods(title: "", items: [.shop, .goods]),
-//            .totale(title: "",
-//                    items: [.subtotal(count: "共1件商品", price: "¥2.50"),
-//                            .single(title: "发票", content: "不开发票", accessory: true)]),
-//            .ticket(title: "单笔订单仅可使用一张优惠券",
-//                    items: [.single(title: "平台优惠券", content: "不可用", accessory: true),
-//                            .single(title: "平台优惠券", content: "不可用", accessory: true),
-//                            .single(title: "平台优惠券", content: "不可用", accessory: true),
-//                            .note(title: "买家留言", content: ""),
-//                            .single(title: "运费", content: "包邮", accessory: false),
-//                            .card(title: "购物卡:0.00元,可抵扣0.00元", switch: false)])
-//        ]
-//
-//        dataSource.accept(data)
-        
-        let addressInfo = dependency.service.queryAddress().map{$0.filter{$0.isDefault}}.asDriver(onErrorJustReturn: [])
-        
-        settle = Driver.combineLatest(addressInfo, addressInfo) { address1, address2 in
-            var preModel = SettlementModel()
-            preModel.goods = goods
-            if let address = address1.first {
-                preModel.address = address
-            }
-            return preModel
+    var model:SettlementModel {
+        didSet {
+            settleRelay.accept(model)
         }
+    }
+    var settleRelay: BehaviorRelay<SettlementModel>
+    
+    init(goods: GoodsModel,
+         dependency: (
+        disposeBag: DisposeBag,
+        addressService: AddressService,
+        couponService: CouponService)) {
         
-        let someObser = dependency.service.simpleAddress()
-        let some = dependency.service.simple()
-        Driver.combineLatest(someObser,some) { so, s in
-            so+s
-        }.drive(onNext: { [weak self](s) in
-            let settlemodel = SettlementModel()
-            if let data = self?.configData(settlemodel) {
-                self?.dataSource.accept(data)
+        
+        var preModel = SettlementModel()
+        preModel.goods = goods
+        model = preModel
+        
+        settleRelay = BehaviorRelay<SettlementModel>(value: model)
+        settleRelay.map{self.configData($0)}
+            .asDriver(onErrorJustReturn: [])
+            .drive(dataSource)
+            .disposed(by: dependency.disposeBag)
+        
+        dependency.addressService.queryAddress()
+            .map{$0.filter{$0.isDefault}}
+            .asObservable()
+            .subscribe(onNext: { (addresses) in
+            if let address = addresses.first {
+                self.model.address = address
             }
         }).disposed(by: dependency.disposeBag)
         
-        settle.drive(onNext: { [weak self](settlemodel) in
-            if let data = self?.configData(settlemodel) {
-                self?.dataSource.accept(data)
-            }
+        dependency.couponService.queryAvailableCoupon()
+            .asObservable()
+            .subscribe(onNext: { (coupons) in
+            self.model.coupons = coupons
         }).disposed(by: dependency.disposeBag)
+
     }
     
     func configData(_ model: SettlementModel) -> [SettlementSectionModel] {
+        
+        let inv_str = model.invoice == nil ? "不开发票" : "个人发票"
+        let available = model.coupons?.count ?? 0 > 0
+        let cou_str = available ? (model.coupon == nil ? "请选择" : "满50减10") : "不可用"
+        let fre_str = model.goods?.freight == 0 ? "包邮" : "¥\(model.goods?.freight ?? 0.0)"
         return [
             .address(title: "", items: [.address(model.address)]),
-            .goods(title: "", items: [.shop, .goods]),
+            .goods(title: "", items: [.shop(model.goods?.shop), .goods(model.goods)]),
             .totale(title: "",
-                    items: [.subtotal(count: "共1件商品", price: "¥2.50"),
-                            .single(title: "发票", content: "不开发票", accessory: true)]),
-            .ticket(title: "单笔订单仅可使用一张优惠券",
-                    items: [.single(title: "平台优惠券", content: "不可用", accessory: true),
-                            .single(title: "平台优惠券", content: "不可用", accessory: true),
-                            .single(title: "平台优惠券", content: "不可用", accessory: true),
-                            .note(title: "买家留言", content: ""),
-                            .single(title: "运费", content: "包邮", accessory: false),
-                            .card(title: "购物卡:0.00元,可抵扣0.00元", switch: false)])
+                    items: [.subtotal(count: "共\(model.goods?.count ?? 0)件商品", price: "¥\(model.goods?.price ?? "0.00")"),
+                            .invoice(title: "发票", content: inv_str, accessory: true)]),
+            .ticket(title: "",
+                    items: [.coupon(title: "优惠券", content: cou_str, accessory: available),
+                        .note(title: "买家留言", content: model.remark),
+                        .single(title: "运费", content: fre_str, accessory: false),
+                        .card(title: "购物卡:0.00元,可抵扣0.00元", switch: false)])
         ]
     }
     
@@ -98,10 +90,12 @@ enum SettlementSectionModel {
 
 enum SettlementSectionItem {
     case address(AddressModel?)
-    case shop
-    case goods
+    case shop(Shop?)
+    case goods(GoodsModel?)
     case subtotal(count: String, price: String)
     case single(title: String, content: String, accessory: Bool)
+    case invoice(title: String, content: String, accessory: Bool)
+    case coupon(title: String, content: String, accessory: Bool)
     case note(title: String, content: String)
     case card(title:String, switch: Bool)
 }
@@ -151,15 +145,13 @@ extension SettlementSectionModel {
     }
     var headerHeight: CGFloat {
         switch self {
-        case .ticket:
-            return 30
         default:
             return 0
         }
     }
     var footerHeight: CGFloat {
         switch self {
-        case .goods:
+        case .goods, .totale:
             return 8
         default:
             return 0
@@ -187,4 +179,8 @@ extension SettlementSectionItem {
 struct SettlementModel {
     var address: AddressModel?
     var goods: GoodsModel?
+    var coupons: [CouponModel]?
+    var coupon: CouponModel?
+    var invoice: Invoice?
+    var remark: String = ""
 }

@@ -80,6 +80,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="goodsCount" destination="uVE-E6-50L" id="XwG-Rq-lXW"/>
+                <outlet property="goodsCover" destination="V7g-Pc-yTk" id="EUP-Rw-q4q"/>
+                <outlet property="goodsName" destination="7pF-XK-p06" id="eol-Op-JIq"/>
+                <outlet property="goodsPrice" destination="ugV-EH-Zyq" id="0ht-o2-Aen"/>
+                <outlet property="goodsSku" destination="63g-Fj-MLl" id="78l-PJ-whq"/>
+            </connections>
             <point key="canvasLocation" x="176.08695652173915" y="126.5625"/>
         </tableViewCell>
     </objects>

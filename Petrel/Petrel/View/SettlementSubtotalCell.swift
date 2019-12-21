@@ -10,6 +10,8 @@ import UIKit
 
 class SettlementSubtotalCell: UITableViewCell {
 
+    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var subtotalLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +23,8 @@ class SettlementSubtotalCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func config(_ count: String, _ subtotal: String) {
+        countLabel.text = count
+        subtotalLabel.text = subtotal
+    }
 }

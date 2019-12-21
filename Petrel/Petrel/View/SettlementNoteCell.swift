@@ -8,12 +8,18 @@
 
 import UIKit
 
-class SettlementNoteCell: UITableViewCell {
+class SettlementNoteCell: UITableViewCell, UITextViewDelegate {
 
     @IBOutlet weak var textView: UITextView!
+    
+    @IBOutlet weak var subLabel: UILabel!
+    
+    var endEdit: ((String) -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        textView.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -22,4 +28,16 @@ class SettlementNoteCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func config(_ title: String, content: String) {
+        textView.text = content
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        let count = textView.text.count + text.count
+        subLabel.text = "\(count)/140"
+        return count < 140
+    }
+    func textViewDidEndEditing(_ textView: UITextView) {
+        endEdit?(textView.text)
+    }
 }

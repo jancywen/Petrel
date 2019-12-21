@@ -15,7 +15,6 @@ import RxCocoa
 class AddressService {
     func queryAddress() -> Observable<[AddressModel]> {
         provider.rx.request(MultiTarget(AddressAPI.shopping("")))
-            .filterSuccessfulStatusCodes()
             .map(to: [AddressModel.self])
             .asObservable()
             .catchError { (error) -> Observable<[AddressModel]> in

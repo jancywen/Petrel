@@ -10,6 +10,8 @@ import UIKit
 
 class SettlementCardCell: UITableViewCell {
 
+    @IBOutlet weak var onOff: UISwitch!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

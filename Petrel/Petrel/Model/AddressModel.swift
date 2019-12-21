@@ -12,7 +12,7 @@ import Moya_SwiftyJSONMapper
 
 struct AddressModel: ALSwiftyJSONAble {
     
-    var id: String?
+    var id: String
     var name: String
     var phone: String
     var detail: String

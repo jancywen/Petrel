@@ -21,13 +21,13 @@ class SettlementViewController: UIViewController {
     var dataSource: RxTableViewSectionedReloadDataSource<SettlementSectionModel>?
     
     let disposeBag = DisposeBag()
-    
-    let invoice = Driver<String>.just("不开发票")
-    
+        
     
     init(goods: GoodsModel) {
         viewModel = SettlementViewModel(goods: goods,
-                                        dependency: (disposeBag: disposeBag, service: AddressService()))
+                                        dependency: (disposeBag: disposeBag,
+                                                     addressService: AddressService(),
+                                                     couponService: CouponService()))
 
         super.init(nibName: nil, bundle: nil)
         
@@ -44,7 +44,7 @@ class SettlementViewController: UIViewController {
         view.backgroundColor = UIColor(0xF7F7F7)
         
         
-        let dataSource = SettlementViewController.dataSource()
+        let dataSource = sectionDataSource()
         self.dataSource = dataSource
         self.viewModel.dataSource
             .asDriver()
@@ -53,6 +53,10 @@ class SettlementViewController: UIViewController {
         
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
         tableView.tableFooterView = UIView()
+        
+        tableView.rx.modelSelected(SettlementSectionItem.self)
+            .subscribe(onNext: selectedCell)
+            .disposed(by: disposeBag)
     }
     
     
@@ -85,13 +89,13 @@ extension SettlementViewController: UITableViewDelegate {
 //    }
 //    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
 //        let footer = tableView.dequeueHeaderFooter()
-//        footer?.backgroundColor = UIColor(0xF7F7F7)
+//        footer?.backgroundColor = .clear
 //        return footer
 //    }
 }
 
 extension SettlementViewController {
-    static func dataSource() -> RxTableViewSectionedReloadDataSource<SettlementSectionModel> {
+    func sectionDataSource() -> RxTableViewSectionedReloadDataSource<SettlementSectionModel> {
         return RxTableViewSectionedReloadDataSource<SettlementSectionModel>(configureCell: { (dataSource, tv, ip, item) in
             switch item {
             case .address(let model):
@@ -107,12 +111,19 @@ extension SettlementViewController {
             case .subtotal( _, _):
                 let cell = tv.dequeueCell(SettlementSubtotalCell.self)
                 return cell!
-            case .single(_, _, _):
-                let cell = tv.dequeueCell(SettlementSingleCell.self)
-                return cell!
-            case .note( _, _):
-                let cell = tv.dequeueCell(SettlementNoteCell.self)
-                return cell!
+            case .single(title: let t, content: let c, _),
+                 .coupon(title: let t, content: let c, _),
+                 .invoice(title: let t, content: let c, _):
+                let cell = tv.dequeueCell(SettlementSingleCell.self) as! SettlementSingleCell
+                cell.config(t, c)
+                return cell
+            case .note( _, let content):
+                let cell = tv.dequeueCell(SettlementNoteCell.self) as! SettlementNoteCell
+                cell.config("", content: content)
+                cell.endEdit = {[weak self] text in
+                    self?.viewModel.model.remark = text
+                }
+                return cell
             case .card( _, _):
                 let cell = tv.dequeueCell(SettlementCardCell.self)
                 return cell!
@@ -121,6 +132,29 @@ extension SettlementViewController {
         titleForHeaderInSection: { dataSource, section in
             return dataSource[section].title
         })
+    }
+    
+    func selectedCell(_ model: SettlementSectionItem ) {
+        switch model {
+        case .address(_):
+            let am = AddressModel(jsonData: "{}")
+            viewModel.model.address = am
+        case .invoice(_, _, let accessory):
+            guard accessory else {
+                return
+            }
+            let invoice = Invoice(jsonData: "{}")
+            viewModel.model.invoice = invoice
+        case .coupon(_, _, let accessory):
+            guard accessory else {
+                return
+            }
+            let coupon = CouponModel(jsonData: "{}")
+            viewModel.model.coupon = coupon
+        default:
+            break
+        }
+        
     }
 }
 

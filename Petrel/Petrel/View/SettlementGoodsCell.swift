@@ -10,6 +10,11 @@ import UIKit
 
 class SettlementGoodsCell: UITableViewCell {
 
+    @IBOutlet weak var goodsCover: UIImageView!
+    @IBOutlet weak var goodsName: UILabel!
+    @IBOutlet weak var goodsSku: UILabel!
+    @IBOutlet weak var goodsPrice: UILabel!
+    @IBOutlet weak var goodsCount: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +26,7 @@ class SettlementGoodsCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func config(_ goods: GoodsModel) {
+        
+    }
 }

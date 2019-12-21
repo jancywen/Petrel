@@ -10,6 +10,7 @@ import UIKit
 
 class SettlementShopCell: UITableViewCell {
 
+    @IBOutlet weak var shopNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +22,7 @@ class SettlementShopCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func config(_ name: String) {
+        shopNameLabel.text = name
+    }
 }

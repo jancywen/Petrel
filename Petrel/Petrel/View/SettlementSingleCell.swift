@@ -10,6 +10,10 @@ import UIKit
 
 class SettlementSingleCell: UITableViewCell {
 
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subTitleLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +25,9 @@ class SettlementSingleCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    
+    func config(_ title: String, _ subTitle: String) {
+        titleLabel.text = title
+        subTitleLabel.text = subTitle
+    }
 }
