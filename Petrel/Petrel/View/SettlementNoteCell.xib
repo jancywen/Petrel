@@ -16,15 +16,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="347" height="109"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="roO-8q-w6L">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="roO-8q-w6L" customClass="PKTextView">
                         <rect key="frame" x="88" y="8" width="249" height="79"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                        <connections>
-                            <outlet property="delegate" destination="-1" id="ovq-wK-ayI"/>
-                        </connections>
                     </textView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="140/140" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqB-uc-gAU">
                         <rect key="frame" x="296" y="92" width="39" height="12"/>
@@ -63,7 +60,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="subLabel" destination="UqB-uc-gAU" id="FAe-iC-mBq"/>
-                <outlet property="textView" destination="roO-8q-w6L" id="Mum-0t-kWO"/>
+                <outlet property="textView" destination="roO-8q-w6L" id="sEY-JR-tWM"/>
             </connections>
             <point key="canvasLocation" x="157.24637681159422" y="163.72767857142856"/>
         </tableViewCell>
