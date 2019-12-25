@@ -18,6 +18,7 @@ enum ItemType {
     case refresh
     case upload
     case settlement
+    case goodsDetail
 }
 
 extension ItemType {
@@ -35,6 +36,8 @@ extension ItemType {
             return "异步上传 排序"
         case .settlement:
             return "商品结算"
+        case .goodsDetail:
+            return "商品详情"
         }
     }
 }
@@ -50,7 +53,8 @@ class ViewController: UIViewController {
                 .signup,
                 .refresh,
                 .upload,
-                .settlement ]
+                .settlement,
+                .goodsDetail ]
     }
     
     override func viewDidLoad() {
@@ -98,6 +102,10 @@ class ViewController: UIViewController {
                 let settlement = SettlementViewController(goods: goods!)
                 settlement.hidesBottomBarWhenPushed = true
                 self?.navigationController?.pushViewController(settlement, animated: true)
+            case .goodsDetail:
+                let detail = GoodsDetailViewController(goodsId: "")
+                detail.hidesBottomBarWhenPushed = true
+                self?.navigationController?.pushViewController(detail, animated: true)
             }
             }).disposed(by: disposeBag)
         
