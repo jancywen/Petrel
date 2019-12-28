@@ -15,6 +15,7 @@ class GoodsDetailViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var buyNow: UIButton!
     let viewModel: GoodsDetailViewModel
     let disposeBag = DisposeBag()
     
@@ -42,6 +43,7 @@ class GoodsDetailViewController: UIViewController {
             .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
+        buyNow.rx.tap.asDriver().drive(onNext: buyNowAction).disposed(by: disposeBag)
     }
 
 }
@@ -84,5 +86,14 @@ extension GoodsDetailViewController {
                     return cell!
                 }
         })
+    }
+}
+
+extension GoodsDetailViewController {
+    func buyNowAction() {
+        let goods = GoodsModel(jsonData: "{}")
+        let settlement = SettlementViewController(goods: goods!)
+        settlement.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(settlement, animated: true)
     }
 }
