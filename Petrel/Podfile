@@ -4,14 +4,27 @@ use_frameworks!
 target 'Petrel' do
 
   pod 'Moya/RxSwift'
-  pod 'SwiftyJSON'
   pod "Moya-SwiftyJSONMapper/RxSwift"
   pod 'RxCocoa'
-  pod 'MBProgressHUD'
-  pod 'MJRefresh'
-  pod 'AliyunOSSiOS', :git => 'https://gitee.com/raychow-github/aliyun-oss-ios-sdk.git'
   pod 'RxDataSources'
+
+  pod 'SwiftyJSON'
+  
+  pod 'MJRefresh'
+  
+  pod 'AliyunOSSiOS', :git => 'https://gitee.com/raychow-github/aliyun-oss-ios-sdk.git'
+  
   pod 'IQKeyboardManagerSwift'
+  
   pod 'SVProgressHUD'
+  pod 'MBProgressHUD'
+
+  pod 'FSPagerView'
+  pod 'SKPhotoBrowser'
+  # 布局
+  pod 'SnapKit'
+  # 图片
+  pod 'Kingfisher'
+  
 end
 

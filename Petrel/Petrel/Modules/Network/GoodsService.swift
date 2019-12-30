@@ -24,4 +24,17 @@ final class GoodsService {
 //        }
 //
     }
+    func someRequest() {
+        provider.request(MultiTarget(GoodsAPI.detail)) { result in
+            switch result {
+            case .success(let response):
+                try? response.filterSuccessfulStatusCodes()
+                break
+            case .failure(let error):
+                break
+            }
+            let response = try? result.value?.filterSuccessfulStatusCodes()
+        }
+        
+    }
 }

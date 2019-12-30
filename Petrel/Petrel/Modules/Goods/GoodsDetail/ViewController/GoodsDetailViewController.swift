@@ -62,10 +62,10 @@ extension GoodsDetailViewController {
             configureCell:{ ds, tv, ip, item in
                 switch item {
                     
-                case .banner:
-                    let cell = tv.dequeueCell(GoodsDetailBannerCell.self)
-                    
-                    return cell!
+                case .banner(let video, let pics):
+                    let cell = tv.dequeueCell(PetrelBannerCell.self) as! PetrelBannerCell
+                    cell.render(videoURL: video, picsURLs: pics)
+                    return cell
                 case .content:
                     let cell = tv.dequeueCell(GoodsDetailContentCell.self)
                     return cell!

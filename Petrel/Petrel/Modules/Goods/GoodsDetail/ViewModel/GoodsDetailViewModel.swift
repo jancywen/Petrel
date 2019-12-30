@@ -47,7 +47,9 @@ final class GoodsDetailViewModel {
     
     
     func configData(_ goods: Goods) -> [GoodsDetailSectionModel] {
-        return [.baseInfo(items: [.banner,
+        let videoUrl = "https://vdept.bdstatic.com/546c704d313242626266737673394633/75515a414a635673/b39c042e82d994cd4c4a82d884c757dcb3ef3cc573c775341e8fbf438b7a5cea92166bb1c126fcd41e89411b01c44ac1.mp4?auth_key=1577702633-0-0-d73f481017eb6b480c14806c6586a58b"
+        let pics = ["https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577705370045&di=ade543f4d7d7c4abd47b9448a8cbcdcd&imgtype=0&src=http%3A%2F%2Fupload.art.ifeng.com%2F2015%2F1105%2F1446710350536.jpg",  "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577705370043&di=0f5ed2d2828b5c41ebcc4cbc35c257b3&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F0feb91434f44454370bcac141648fbdfbec3ee7e5bfb5-ggUAcx_fw658", "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577705448314&di=b614dc0d5428f6806bdc24bbfcdbd6a4&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D1525588670%2C781012550%26fm%3D214%26gp%3D0.jpg", "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577705370041&di=60463adec3826432c2d9fbd5a192a804&imgtype=0&src=http%3A%2F%2Fp0.qhimgs4.com%2Ft01abad527a7e07978e.jpg"]
+        return [.baseInfo(items: [.banner(videoUrl: videoUrl, picsUrls: pics),
                                   .content]),
                 .available(items: [.coupon,
                                    .sku,
@@ -114,7 +116,7 @@ extension GoodsDetailSectionModel {
 }
 
 enum GoodsDetailSectionItem {
-    case banner
+    case banner(videoUrl: String, picsUrls: [String])
     case content
     case coupon
     case sku
