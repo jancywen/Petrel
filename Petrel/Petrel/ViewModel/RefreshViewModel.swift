@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import MJRefresh
 
 class RefreshViewModel {
     /// 列表数据
@@ -16,9 +17,7 @@ class RefreshViewModel {
     /// 停止下拉刷新
     let endHeaderRefreshing: Driver<Bool>
     /// 停止上提加载
-    let endFooterRefreshing: Driver<Bool>
-    /// 显示底线
-    let endRefreshingWithNoMoreData: Driver<Bool>
+    let endFooterRefreshingWithState: Driver<MJRefreshState>
     
     var total = 0
     
@@ -37,9 +36,14 @@ class RefreshViewModel {
         }
 
         self.endHeaderRefreshing = headerRefreshData.map{_ in true}
-        self.endFooterRefreshing = footerRefreshData.map{_ in true}
-        self.endRefreshingWithNoMoreData = self.tableData.asDriver().map{$0.count == 30}
-        
+
+        self.endFooterRefreshingWithState = Driver.combineLatest(self.tableData.asDriver(), footerRefreshData.asDriver()) { (list1, list2) in
+            if list1.count == 45 {
+                return .noMoreData
+            }else {
+                return .idle
+            }
+        }.debug()
         
         headerRefreshData.drive(onNext: { (items) in
             self.tableData.accept(items)

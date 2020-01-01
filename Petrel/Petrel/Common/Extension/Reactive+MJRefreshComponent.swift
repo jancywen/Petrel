@@ -33,3 +33,15 @@ extension Reactive where Base: MJRefreshComponent {
         }
     }
 }
+
+extension Reactive where Base: MJRefreshFooter {
+    var endRefreshingWithState: Binder<MJRefreshState> {
+        return Binder(base) {refresh, state in
+            if state == .noMoreData {
+                refresh.endRefreshingWithNoMoreData()
+            }else {
+                refresh.endRefreshing()
+            }
+        }
+    }
+}

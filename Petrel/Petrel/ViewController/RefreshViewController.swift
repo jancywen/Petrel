@@ -12,7 +12,7 @@ import RxSwift
 import MJRefresh
 
 class RefreshViewController: UIViewController {
-
+    
     
     var tableView: UITableView!
     let disposeBag = DisposeBag()
@@ -20,9 +20,8 @@ class RefreshViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.tableView = UITableView(frame: view.frame, style: .plain)
-//        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         self.tableView.tableFooterView = UIView()
         self.view.addSubview(tableView)
         
@@ -41,25 +40,20 @@ class RefreshViewController: UIViewController {
             dependency: (disposeBag: disposeBag, networkService: NetworkService()))
         
         viewModel.tableData.asDriver().drive(tableView.rx.items) { (tableView, row, elemet) in
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
             let cell = tableView.dequeueCell(UITableViewCell.self)
             cell?.textLabel?.text = "\(row) \(elemet)"
             return cell!
         }.disposed(by: disposeBag)
         
         viewModel.endHeaderRefreshing.drive(self.tableView.mj_header!.rx.endRefreshing).disposed(by: disposeBag)
-        viewModel.endFooterRefreshing.drive(self.tableView.mj_footer!.rx.endRefreshing).disposed(by: disposeBag)
-        viewModel.endRefreshingWithNoMoreData.drive(self.tableView.mj_footer!.rx.isHidden).disposed(by: disposeBag)
-//        viewModel.endRefreshingWithNoMoreData.drive(onNext: { (noMoreData) in
-//            if noMoreData {
-//                self.tableView.mj_footer!.endRefreshingWithNoMoreData()
-//            }else {
-//                self.tableView.mj_footer!.resetNoMoreData()
-//            }
-//            }).disposed(by: disposeBag)
+        viewModel.endHeaderRefreshing.drive(onNext: { (_) in
+            self.tableView.mj_footer?.resetNoMoreData()
+            }).disposed(by: disposeBag)
         
+        viewModel.endFooterRefreshingWithState
+            .drive(self.tableView.mj_footer!.rx.endRefreshingWithState)
+            .disposed(by: disposeBag)
         
     }
     
-
 }
