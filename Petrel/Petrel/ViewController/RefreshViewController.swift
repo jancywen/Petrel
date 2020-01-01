@@ -26,8 +26,14 @@ class RefreshViewController: UIViewController {
         self.tableView.tableFooterView = UIView()
         self.view.addSubview(tableView)
         
+        let label = FPSLabel(frame: .zero)
+        self.view.addSubview(label)
+        label.center = view.center
+        
         self.tableView.mj_header = MJRefreshNormalHeader()
-        self.tableView.mj_footer = MJRefreshAutoStateFooter()
+        let footer = MJRefreshAutoStateFooter()
+        footer.setTitle("-- NO MORE DATA --", for: .noMoreData)
+        self.tableView.mj_footer = footer
         
         let viewModel = RefreshViewModel(
             input: (headerRefresh: self.tableView.mj_header!.rx.refreshing.asDriver(),
@@ -43,17 +49,14 @@ class RefreshViewController: UIViewController {
         
         viewModel.endHeaderRefreshing.drive(self.tableView.mj_header!.rx.endRefreshing).disposed(by: disposeBag)
         viewModel.endFooterRefreshing.drive(self.tableView.mj_footer!.rx.endRefreshing).disposed(by: disposeBag)
-//        viewModel.endRefreshingWithNoMoreData.drive(onNext: {self.tableView.mj_footer.isHidden = $0}).disposed(by: disposeBag)
-        viewModel.endRefreshingWithNoMoreData.drive(onNext: { (noMoreData) in
-            if noMoreData {
-                let footer = MJRefreshAutoStateFooter()
-                footer.setTitle("-- NO MORE DATA --", for: .noMoreData)
-                footer.endRefreshingWithNoMoreData()
-                self.tableView.mj_footer = footer
-            }else {
-                self.tableView.mj_footer!.resetNoMoreData()
-            }
-            }).disposed(by: disposeBag)
+        viewModel.endRefreshingWithNoMoreData.drive(self.tableView.mj_footer!.rx.isHidden).disposed(by: disposeBag)
+//        viewModel.endRefreshingWithNoMoreData.drive(onNext: { (noMoreData) in
+//            if noMoreData {
+//                self.tableView.mj_footer!.endRefreshingWithNoMoreData()
+//            }else {
+//                self.tableView.mj_footer!.resetNoMoreData()
+//            }
+//            }).disposed(by: disposeBag)
         
         
     }
