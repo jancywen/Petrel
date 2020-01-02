@@ -37,7 +37,8 @@ class RefreshViewModel {
 
         self.endHeaderRefreshing = headerRefreshData.map{_ in true}
 
-        self.endFooterRefreshingWithState = Driver.combineLatest(self.tableData.asDriver(), footerRefreshData.asDriver()) { (list1, list2) in
+        self.endFooterRefreshingWithState = Driver.combineLatest(self.tableData.asDriver(), headerRefreshData.asDriver()) { (list1, list2) in
+            /// 从 headerrefreshdata 返回的数据中取出totaly
             if list1.count == 45 {
                 return .noMoreData
             }else {
