@@ -17,7 +17,7 @@ class PetrelTabBarController: UITabBarController {
         let main = UINavigationController(rootViewController: mainvc)
         main.tabBarItem = UITabBarItem(title: "首页", image: nil, selectedImage: nil)
         
-        let mine = UINavigationController(rootViewController: UIViewController())
+        let mine = UINavigationController(rootViewController: MineViewController())
         mine.tabBarItem = UITabBarItem(title: "我的", image: nil, selectedImage: nil)
         
         self.viewControllers = [main, mine]

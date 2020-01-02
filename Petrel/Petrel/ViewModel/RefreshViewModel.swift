@@ -19,8 +19,7 @@ class RefreshViewModel {
     /// 停止上提加载
     let endFooterRefreshingWithState: Driver<MJRefreshState>
     
-    var total = 0
-    
+    //MARK: - INIT
     init(input:
         (headerRefresh: Driver<Void>,
         footerRefresh: Driver<Void>),

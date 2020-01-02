@@ -130,9 +130,10 @@ class PetrelPlayerView: UIView {
         
         operatorButton.setImage(UIImage(named: "petrel_video_pause"), for: .normal)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            if self.nextOperator == .pause {
-                self.operatorButton.isHidden = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {[weak self] in
+            if self?.nextOperator == .pause {
+                self?.operatorButton.setImage(nil, for: .normal)
+                self?.nextOperator = .showPause
             }
         }
     }
