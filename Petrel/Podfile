@@ -25,6 +25,7 @@ target 'Petrel' do
   pod 'SnapKit'
   # 图片
   pod 'Kingfisher'
-  
+  # realm
+  pod "RxRealm"
 end
 
