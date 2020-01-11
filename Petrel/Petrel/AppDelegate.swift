@@ -8,6 +8,17 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import RealmSwift
+
+
+let formatter: DateFormatter = {
+    let f = DateFormatter()
+    f.timeStyle = .long
+    return f
+}()
+
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,7 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared.enable = true
-
+        // reset the realm on each app launch
+        let realm = try! Realm()
+        try! realm.write {
+            realm.deleteAll()
+        }
         return true
     }
 

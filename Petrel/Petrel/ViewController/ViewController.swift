@@ -20,6 +20,7 @@ enum ItemType {
     case settlement
     case goodsDetail
     case ijk
+    case realm
 }
 
 extension ItemType {
@@ -41,6 +42,8 @@ extension ItemType {
             return "商品详情"
         case .ijk:
             return "ijk播放器"
+        case .realm:
+            return "realm数据库"
         }
     }
 }
@@ -58,7 +61,8 @@ class ViewController: UIViewController {
                 .upload,
                 .settlement,
                 .goodsDetail,
-                .ijk ]
+                .ijk,
+                .realm ]
     }
     
     override func viewDidLoad() {
@@ -114,6 +118,10 @@ class ViewController: UIViewController {
                 let ijk = IJKMediaViewController()
                 ijk.hidesBottomBarWhenPushed = true
                 self?.navigationController?.pushViewController(ijk, animated: true)
+            case .realm:
+                let realm = RealmViewController()
+                realm.hidesBottomBarWhenPushed = true
+                self?.navigationController?.pushViewController(realm, animated: true)
             }
             }).disposed(by: disposeBag)
         

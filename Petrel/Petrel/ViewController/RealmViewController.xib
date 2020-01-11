@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RealmViewController" customModule="Petrel" customModuleProvider="target">
+            <connections>
+                <outlet property="addTwoItemsButton" destination="2vN-Yk-YSz" id="jP5-JY-rOp"/>
+                <outlet property="tableView" destination="hcy-qI-egq" id="ZAV-Wh-hni"/>
+                <outlet property="tickItemButton" destination="qPD-wK-Cat" id="Fki-RP-FUP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hcy-qI-egq">
+                    <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="EYz-Ql-8Zu"/>
+                        <outlet property="delegate" destination="-1" id="xzl-MO-Xfn"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPD-wK-Cat">
+                    <rect key="frame" x="0.0" y="812" width="207" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="JER-xR-GBv"/>
+                    </constraints>
+                    <state key="normal" title="tickItem"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vN-Yk-YSz">
+                    <rect key="frame" x="207" y="812" width="207" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="X85-jR-YS9"/>
+                    </constraints>
+                    <state key="normal" title="addTwoItems"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hcy-qI-egq" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="3l2-PJ-kw8"/>
+                <constraint firstItem="hcy-qI-egq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="C6n-j0-hmg"/>
+                <constraint firstItem="2vN-Yk-YSz" firstAttribute="leading" secondItem="qPD-wK-Cat" secondAttribute="trailing" id="TQ1-Bb-Xot"/>
+                <constraint firstItem="hcy-qI-egq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="TcC-FC-cPT"/>
+                <constraint firstItem="2vN-Yk-YSz" firstAttribute="width" secondItem="qPD-wK-Cat" secondAttribute="width" id="XDW-bj-DPA"/>
+                <constraint firstItem="qPD-wK-Cat" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="aQO-T2-ZYd"/>
+                <constraint firstItem="qPD-wK-Cat" firstAttribute="top" secondItem="hcy-qI-egq" secondAttribute="bottom" id="auZ-eo-a7G"/>
+                <constraint firstItem="qPD-wK-Cat" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gX3-5g-QjH"/>
+                <constraint firstItem="2vN-Yk-YSz" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="imR-G9-X7f"/>
+                <constraint firstItem="2vN-Yk-YSz" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="r9y-la-BA3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="100"/>
+        </view>
+    </objects>
+</document>
