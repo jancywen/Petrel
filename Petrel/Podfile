@@ -27,5 +27,8 @@ target 'Petrel' do
   pod 'Kingfisher'
   # realm
   pod "RxRealm"
+  
+  # router
+  pod 'URLNavigator'
 end
 

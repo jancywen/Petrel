@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import URLNavigator
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
