@@ -9,7 +9,7 @@
 import UIKit
 import IQKeyboardManagerSwift
 import RealmSwift
-
+import URLNavigator
 
 let formatter: DateFormatter = {
     let f = DateFormatter()
@@ -17,7 +17,7 @@ let formatter: DateFormatter = {
     return f
 }()
 
-
+let navigator = Navigator()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,6 +31,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         try! realm.write {
             realm.deleteAll()
         }
+        
+        
+        /// 设置路由
+        URLNavigationMap.initialize(navigator: navigator)
+        
         return true
     }
 

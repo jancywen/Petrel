@@ -43,3 +43,10 @@ struct Song: ALSwiftyJSONAble{
         artist = jsonData["artist"].stringValue
     }
 }
+
+
+extension Channel:Codable{}
+extension Channel:ConvertToStringable {
+    typealias Result = Channel
+    var valueString: String { return toString(result: self) }
+}
