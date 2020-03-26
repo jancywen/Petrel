@@ -16,37 +16,42 @@ struct URLNavigationMap {
         navigator.register("petrel://douban") { url, values, context in
             return DouBanViewController()
         }
-//        navigator.register("petrel://single") { _,_,_ in URLNavViewController()}
         
-//        navigator.register("petrel://multi") { (url, values, context) -> UIViewController? in
-//
-//            guard let name = url.queryParameters["name"],
-//                let score = url.queryParameters["score"] else {
-//                return nil
-//            }
-//            return URLNavViewController(name: name, score: score)
-//        }
+        navigator.register("petrel://urlnav") { _,_,_ in URLNavViewController() }
         
-        navigator.register("petrel://any") { (url, values, context) -> UIViewController? in
+        /// no param
+        navigator.register("petrel://noParam") { _,_,_ in NoParamViewController()}
+        /// one param
+        navigator.register("petrel://oneParam/<name>") { url, values, _ in
+            guard let name = values["name"] as? String else {return nil}
+            return OneParamViewController(name: name)
+        }
+        /// multi param
+        navigator.register("petrel://multiParam") { (url, values, context) -> UIViewController? in
+            guard let name = url.queryParameters["name"],
+                let score = url.queryParameters["score"] else {
+                return nil
+            }
+            return MultiParamViewController(name: name, score: score)
+        }
+        /// set context
+        navigator.register("petrel://setContext") { (url, values, context) -> UIViewController? in
             
             guard let channel = context as? Channel else {
                 return nil
             }
-            return URLNavViewController(channel: channel)
+            let vc = SetContextViewController(channel: channel)
+            vc.modalPresentationStyle = .fullScreen
+            return vc
         }
-                
-//        navigator.register("petrel://nav/<info>") { url, values, context in
-//
-//            guard let info = values["info"] as? String, let channel = Channel(jsonData:  JSON(parseJSON: info)) else {
-//                return nil
-//            }
-//            return URLNavViewController(channel: channel)
-//        }
-//        navigator.register
-//      navigator.register("myapp://user/<int:id>") { ... }
-//      navigator.register("myapp://post/<title>") { ... }
-//      navigator.handle("myapp://alert") { ... }
-        
+        /// model  to json
+        navigator.register("petrel://modeltojson/<info>") { url, values, context in
+
+            guard let info = values["info"] as? String, let channel = Channel(jsonData:  JSON(parseJSON: info)) else {
+                return nil
+            }
+            return ModelToJsonViewController(channel: channel)
+        }
         
         navigator.register("http://<path:_>", self.webViewControllerFactory)
         navigator.register("https://<path:_>", self.webViewControllerFactory)

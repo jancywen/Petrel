@@ -46,7 +46,7 @@ extension ItemType {
         case .realm:
             return "realm数据库"
         case .url:
-            return "URLNavigator"
+            return "URLNavigator应用"
         }
     }
 }
@@ -127,27 +127,7 @@ class ViewController: UIViewController {
                 realm.hidesBottomBarWhenPushed = true
                 self?.navigationController?.pushViewController(realm, animated: true)
             case .url:
-                ///无参数
-//                navigator.push("petrel://douban")
-                /// 单参数
-                
-                /// 多个参数
-                navigator.present("petrel://multi?name=LiLei&score=59")
-                /// 模型
-//                let channel = Channel(jsonData: JSON(parseJSON: "{\"name\":\"Hally\"}"))
-//                if let json = channel?.valueString  {
-//                    navigator.push("petrel://nav/\(json)")
-//                }
-                
-                /// any
-                let channel = Channel(jsonData: JSON(parseJSON: "{\"name\":\"Hally\"}"))
-                navigator.push("petrel://any", context: channel as Any)
-                /// 打开网页
-//                navigator.present("https://baidu.com")
-                
-                /// 弹框
-//                navigator.open("petrel://alert?title=Hello&message=World")
-                break
+                navigator.push("petrel://urlnav")
             }
             }).disposed(by: disposeBag)
         
