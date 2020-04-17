@@ -61,6 +61,12 @@
 		E89B7F8123A32D6800C9EA0F /* OSSAccessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B7F8023A32D6800C9EA0F /* OSSAccessModel.swift */; };
 		E89B7F8323A32E8600C9EA0F /* OSSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B7F8223A32E8600C9EA0F /* OSSService.swift */; };
 		E89B7F8623A32FD700C9EA0F /* OSSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B7F8523A32FD700C9EA0F /* OSSManager.swift */; };
+		E89FA23C2446F54900CBA834 /* OrderMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89FA23B2446F54900CBA834 /* OrderMainViewController.swift */; };
+		E89FA23E2446F55B00CBA834 /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89FA23D2446F55B00CBA834 /* OrderListViewController.swift */; };
+		E89FA2422446FBF500CBA834 /* OrderEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89FA2412446FBF500CBA834 /* OrderEnum.swift */; };
+		E89FA2452447038900CBA834 /* DeviceTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89FA2442447038900CBA834 /* DeviceTool.swift */; };
+		E89FA249244853EF00CBA834 /* OrderListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89FA247244853EF00CBA834 /* OrderListCell.swift */; };
+		E89FA24A244853EF00CBA834 /* OrderListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E89FA248244853EF00CBA834 /* OrderListCell.xib */; };
 		E8A48A8723A9EDEA00B53DBB /* UploadAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A48A8623A9EDEA00B53DBB /* UploadAPI.swift */; };
 		E8A48A8A23A9EF8000B53DBB /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A48A8823A9EF8000B53DBB /* UploadViewController.swift */; };
 		E8A48A8B23A9EF8000B53DBB /* UploadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8A48A8923A9EF8000B53DBB /* UploadViewController.xib */; };
@@ -194,6 +200,12 @@
 		E89B7F8023A32D6800C9EA0F /* OSSAccessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSSAccessModel.swift; sourceTree = "<group>"; };
 		E89B7F8223A32E8600C9EA0F /* OSSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSSService.swift; sourceTree = "<group>"; };
 		E89B7F8523A32FD700C9EA0F /* OSSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSSManager.swift; sourceTree = "<group>"; };
+		E89FA23B2446F54900CBA834 /* OrderMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMainViewController.swift; sourceTree = "<group>"; };
+		E89FA23D2446F55B00CBA834 /* OrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
+		E89FA2412446FBF500CBA834 /* OrderEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderEnum.swift; sourceTree = "<group>"; };
+		E89FA2442447038900CBA834 /* DeviceTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTool.swift; sourceTree = "<group>"; };
+		E89FA247244853EF00CBA834 /* OrderListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListCell.swift; sourceTree = "<group>"; };
+		E89FA248244853EF00CBA834 /* OrderListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderListCell.xib; sourceTree = "<group>"; };
 		E8A48A8623A9EDEA00B53DBB /* UploadAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadAPI.swift; sourceTree = "<group>"; };
 		E8A48A8823A9EF8000B53DBB /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		E8A48A8923A9EF8000B53DBB /* UploadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadViewController.xib; sourceTree = "<group>"; };
@@ -364,6 +376,8 @@
 		E81C5B5723A0E015000D681C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E89FA24B244868E100CBA834 /* Animation */,
+				E89FA2392446F3E600CBA834 /* Order */,
 				E88EBF102429E8AB008F2FF7 /* Guide */,
 				E82E6BA623B3093200DB93C6 /* Goods */,
 				E81C5B5923A0E066000D681C /* Mine */,
@@ -646,6 +660,65 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		E89FA2392446F3E600CBA834 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				E89FA246244853D500CBA834 /* View */,
+				E89FA2402446FBD800CBA834 /* ViewModel */,
+				E89FA23F2446FBD200CBA834 /* Model */,
+				E89FA23A2446F41800CBA834 /* Controller */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		E89FA23A2446F41800CBA834 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E89FA23B2446F54900CBA834 /* OrderMainViewController.swift */,
+				E89FA23D2446F55B00CBA834 /* OrderListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E89FA23F2446FBD200CBA834 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E89FA2412446FBF500CBA834 /* OrderEnum.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E89FA2402446FBD800CBA834 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E89FA2432447037900CBA834 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				E89FA2442447038900CBA834 /* DeviceTool.swift */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		E89FA246244853D500CBA834 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E89FA247244853EF00CBA834 /* OrderListCell.swift */,
+				E89FA248244853EF00CBA834 /* OrderListCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E89FA24B244868E100CBA834 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		E8B613B323C48C4000DABC25 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -753,6 +826,7 @@
 		E8E48DFE238BA0C600003B8A /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				E89FA2432447037900CBA834 /* Tool */,
 				E88EBF112429EA87008F2FF7 /* API */,
 				E8297681242B2A7400C70788 /* URLNavigationMap.swift */,
 			);
@@ -850,6 +924,7 @@
 			files = (
 				E8154C1123A1E1E200861A86 /* MineViewController.xib in Resources */,
 				E82E6BCA23B33C4000DB93C6 /* GoodsDetailCommentCell.xib in Resources */,
+				E89FA24A244853EF00CBA834 /* OrderListCell.xib in Resources */,
 				E82E6BB123B330A900DB93C6 /* GoodsDetailViewController.xib in Resources */,
 				E829768A242C553F00C70788 /* URLNavViewController.xib in Resources */,
 				E82E6BC623B33BB300DB93C6 /* GoodsDetailCouponCell.xib in Resources */,
@@ -923,6 +998,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E89FA23C2446F54900CBA834 /* OrderMainViewController.swift in Sources */,
 				E8A48AB823ACC29200B53DBB /* AddressModel.swift in Sources */,
 				E8A48ABE23ACC9B100B53DBB /* TargetType+Extension.swift in Sources */,
 				E8A48AB423ACB45000B53DBB /* UIFont+Extension.swift in Sources */,
@@ -942,6 +1018,7 @@
 				E8A48DF1242C5BA8008B34F1 /* SetContextViewController.swift in Sources */,
 				E83ED23D23ADB1820088B179 /* CouponModel.swift in Sources */,
 				E8E48E07238BC54E00003B8A /* DouBanService.swift in Sources */,
+				E89FA2452447038900CBA834 /* DeviceTool.swift in Sources */,
 				E891EC552390E0070071EFAB /* NetworkService.swift in Sources */,
 				E8A48A9923AC7ADE00B53DBB /* SettlementShopCell.swift in Sources */,
 				E891EC532390CC1A0071EFAB /* Reactive+MJRefreshComponent.swift in Sources */,
@@ -955,9 +1032,11 @@
 				E82E6BD223B341BD00DB93C6 /* GoodsService.swift in Sources */,
 				E89B7F8123A32D6800C9EA0F /* OSSAccessModel.swift in Sources */,
 				E83ED23B23ADB0B10088B179 /* CouponService.swift in Sources */,
+				E89FA2422446FBF500CBA834 /* OrderEnum.swift in Sources */,
 				E8A48AB623ACB7C400B53DBB /* UIColor+Extension.swift in Sources */,
 				E8A48DED242C5B7F008B34F1 /* MultiParamViewController.swift in Sources */,
 				E8E48DE6238B9B9A00003B8A /* AppDelegate.swift in Sources */,
+				E89FA249244853EF00CBA834 /* OrderListCell.swift in Sources */,
 				E8CDE3C223BDF17A00F762B7 /* MineServiceCell.swift in Sources */,
 				E8E48E05238BC19200003B8A /* DouBanViewController.swift in Sources */,
 				E8CDE3C623BE05BD00F762B7 /* LeftAlignmentLayout.swift in Sources */,
@@ -977,6 +1056,7 @@
 				E8A48ABC23ACC66A00B53DBB /* AddressService.swift in Sources */,
 				E8304DCD23B9D4C100414CEA /* PetrelVideoCell.swift in Sources */,
 				E8E48DE8238B9B9A00003B8A /* SceneDelegate.swift in Sources */,
+				E89FA23E2446F55B00CBA834 /* OrderListViewController.swift in Sources */,
 				E89B7F8623A32FD700C9EA0F /* OSSManager.swift in Sources */,
 				E8A48AA923AC91A500B53DBB /* SettlementNoteCell.swift in Sources */,
 				E8A48AA123AC7D3200B53DBB /* SettlementSubtotalCell.swift in Sources */,

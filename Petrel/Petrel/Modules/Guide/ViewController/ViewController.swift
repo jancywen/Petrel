@@ -22,6 +22,8 @@ enum ItemType {
     case ijk
     case realm
     case url
+    case segment
+    case animation
 }
 
 extension ItemType {
@@ -47,6 +49,10 @@ extension ItemType {
             return "realm数据库"
         case .url:
             return "URLNavigator应用"
+        case .segment:
+            return "JXSegmentView"
+        case .animation:
+            return "动画"
         }
     }
 }
@@ -66,7 +72,9 @@ class ViewController: UIViewController {
                 .goodsDetail,
                 .ijk,
                 .realm,
-                .url ]
+                .url,
+                .segment,
+                .animation ]
     }
     
     override func viewDidLoad() {
@@ -128,6 +136,14 @@ class ViewController: UIViewController {
                 self?.navigationController?.pushViewController(realm, animated: true)
             case .url:
                 navigator.push("petrel://urlnav")
+            case .segment:
+                let orderMain = OrderMainViewController()
+                orderMain.hidesBottomBarWhenPushed = true
+                self?.navigationController?.pushViewController(orderMain, animated: true)
+                break
+            case .animation:
+                
+                break
             }
             }).disposed(by: disposeBag)
         

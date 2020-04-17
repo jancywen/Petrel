@@ -30,5 +30,13 @@ target 'Petrel' do
   
   # router
   pod 'URLNavigator'
+  
+  # 选择器组件
+#  pod 'BRPickerView'
+#
+#  pod 'GrowingTextView'
+
+pod 'JXSegmentedView'
+
 end
 
