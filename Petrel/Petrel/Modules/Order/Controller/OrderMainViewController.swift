@@ -12,13 +12,18 @@ import RxCocoa
 import RxSwift
 
 class OrderMainViewController: UIViewController {
-
+    
     
     var segmentedView : JXSegmentedView!
     var segmentedDataSource: JXSegmentedTitleDataSource!
     var listContainerView: JXSegmentedListContainerView!
     
     var rightBtn: UIButton!
+    
+    var operateType:OrderOperateType! = .single
+    
+    var orderListVCs = [OrderListViewController]()
+    var orderListTypes:[OrderStatusType] = [.obligation, .undeliver, .unreceive, .complete, .close]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,21 +35,20 @@ class OrderMainViewController: UIViewController {
     
     private func configUI() {
         
-        rightBtn = UIButton(title: "批量", textColor: .black, font: UIFont.systemFont(ofSize: 14))
+        rightBtn = UIButton(title: operateType.title, textColor: .black, font: UIFont.systemFont(ofSize: 14))
         rightBtn.addTarget(self, action: #selector(rightAction(_:)), for: .touchUpInside)
         let rightItem = UIBarButtonItem(customView: rightBtn)
         navigationItem.rightBarButtonItem = rightItem
+        
+        /// 初始化控制器
+        orderListVCs = orderListTypes.map{OrderListViewController(type: $0)}
         
         segmentedView = JXSegmentedView()
         segmentedView.delegate = self
         view.addSubview(segmentedView)
         
         segmentedDataSource = JXSegmentedTitleDataSource()
-        segmentedDataSource.titles = [OrderStatusType.obligation.statusStr,
-                                      OrderStatusType.undeliver.statusStr,
-                                      OrderStatusType.unreceive.statusStr,
-                                      OrderStatusType.complete.statusStr,
-                                      OrderStatusType.close.statusStr]
+        segmentedDataSource.titles = orderListTypes.map{$0.statusStr}
         segmentedDataSource.isTitleColorGradientEnabled = true
         segmentedView.dataSource = self.segmentedDataSource
         
@@ -56,19 +60,28 @@ class OrderMainViewController: UIViewController {
         view.addSubview(self.listContainerView)
         segmentedView.listContainer = listContainerView
         
-        
-    }
+        segmentedView.frame = CGRect(x: 0, y: DeviceTool.navBarHeight(), width: view.bounds.size.width , height: 50)
+        listContainerView.frame = CGRect(x: 0, y:DeviceTool.navBarHeight() + 50, width: view.bounds.size.width, height: view.bounds.size.height - 50 - DeviceTool.navBarHeight())
 
+    }
+    
     
     @objc func rightAction(_ sender: UIButton) {
+        operateType = operateType == .single ? .batch : .single
+        rightBtn.setTitle(operateType.title, for: .normal)
         
+        segmentedView.isUserInteractionEnabled = operateType == .single
+        listContainerView.frame = CGRect(x: 0, y:DeviceTool.navBarHeight() + 50, width: view.bounds.size.width, height: view.bounds.size.height - 50 - DeviceTool.navBarHeight() - (operateType == .single ? 0 : 90))
+        segmentedView.contentScrollView?.isScrollEnabled = operateType == .single
+        if segmentedView.selectedIndex < orderListVCs.count {
+            let vc = orderListVCs[segmentedView.selectedIndex]
+            vc.operateAction(operateType)
+        }
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-
-        segmentedView.frame = CGRect(x: 0, y: DeviceTool.navBarHeight(), width: view.bounds.size.width , height: 50)
-        listContainerView.frame = CGRect(x: 0, y:DeviceTool.navBarHeight() + 50, width: view.bounds.size.width, height: view.bounds.size.height - 50 - DeviceTool.navBarHeight())
+        
     }
     
 }
@@ -82,7 +95,10 @@ extension OrderMainViewController: JXSegmentedListContainerViewDataSource {
     }
     
     func listContainerView(_ listContainerView: JXSegmentedListContainerView, initListAt index: Int) -> JXSegmentedListContainerViewListDelegate {
-        return OrderListViewController()
+        guard index < orderListVCs.count else {
+            return OrderListViewController(type: .close)
+        }
+        return orderListVCs[index]
     }
     
     

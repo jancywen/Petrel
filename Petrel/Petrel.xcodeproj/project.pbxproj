@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2A3D6589BD6EBAE1B98427BA /* Pods_Petrel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3118BFED44B34FDA6F5DAC3 /* Pods_Petrel.framework */; };
+		E80BA7202449B84E00474F9A /* AnimationIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BA71F2449B84E00474F9A /* AnimationIndexViewController.swift */; };
+		E80BA723244BFA5600474F9A /* AnimationListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BA722244BFA5600474F9A /* AnimationListModel.swift */; };
+		E80BA725244BFAD700474F9A /* AnimationEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BA724244BFAD700474F9A /* AnimationEnum.swift */; };
 		E8154C1023A1E1E200861A86 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8154C0E23A1E1E200861A86 /* MineViewController.swift */; };
 		E8154C1123A1E1E200861A86 /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8154C0F23A1E1E200861A86 /* MineViewController.xib */; };
 		E8154C1423A1E49500861A86 /* MineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8154C1323A1E49500861A86 /* MineViewModel.swift */; };
@@ -145,6 +148,9 @@
 		596C9AD521EA110965C3E361 /* Pods-Petrel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petrel.release.xcconfig"; path = "Target Support Files/Pods-Petrel/Pods-Petrel.release.xcconfig"; sourceTree = "<group>"; };
 		B20B8CCFC0BB3EC91717A71E /* Pods-Petrel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petrel.debug.xcconfig"; path = "Target Support Files/Pods-Petrel/Pods-Petrel.debug.xcconfig"; sourceTree = "<group>"; };
 		E3118BFED44B34FDA6F5DAC3 /* Pods_Petrel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Petrel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E80BA71F2449B84E00474F9A /* AnimationIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationIndexViewController.swift; sourceTree = "<group>"; };
+		E80BA722244BFA5600474F9A /* AnimationListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationListModel.swift; sourceTree = "<group>"; };
+		E80BA724244BFAD700474F9A /* AnimationEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationEnum.swift; sourceTree = "<group>"; };
 		E8154C0E23A1E1E200861A86 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		E8154C0F23A1E1E200861A86 /* MineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineViewController.xib; sourceTree = "<group>"; };
 		E8154C1323A1E49500861A86 /* MineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewModel.swift; sourceTree = "<group>"; };
@@ -338,6 +344,32 @@
 				E3118BFED44B34FDA6F5DAC3 /* Pods_Petrel.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E80BA71D2449B7DD00474F9A /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				E8E48DE5238B9B9A00003B8A /* AppDelegate.swift */,
+				E8E48DE7238B9B9A00003B8A /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		E80BA71E2449B81100474F9A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E80BA71F2449B84E00474F9A /* AnimationIndexViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E80BA721244BFA0900474F9A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E80BA722244BFA5600474F9A /* AnimationListModel.swift */,
+				E80BA724244BFAD700474F9A /* AnimationEnum.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E8154C0C23A1E19B00861A86 /* ViewController */ = {
@@ -715,6 +747,8 @@
 		E89FA24B244868E100CBA834 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				E80BA721244BFA0900474F9A /* Model */,
+				E80BA71E2449B81100474F9A /* Controller */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -770,8 +804,7 @@
 				E81C5B5723A0E015000D681C /* Modules */,
 				E8E48DFE238BA0C600003B8A /* Configuration */,
 				E8E48DF9238B9F9000003B8A /* Resource */,
-				E8E48DE5238B9B9A00003B8A /* AppDelegate.swift */,
-				E8E48DE7238B9B9A00003B8A /* SceneDelegate.swift */,
+				E80BA71D2449B7DD00474F9A /* AppDelegate */,
 			);
 			path = Petrel;
 			sourceTree = "<group>";
@@ -1030,7 +1063,9 @@
 				E8E48E01238BA73D00003B8A /* DouBanAPI.swift in Sources */,
 				E8E48E1E238E523700003B8A /* Reactive+UILabel.swift in Sources */,
 				E82E6BD223B341BD00DB93C6 /* GoodsService.swift in Sources */,
+				E80BA725244BFAD700474F9A /* AnimationEnum.swift in Sources */,
 				E89B7F8123A32D6800C9EA0F /* OSSAccessModel.swift in Sources */,
+				E80BA7202449B84E00474F9A /* AnimationIndexViewController.swift in Sources */,
 				E83ED23B23ADB0B10088B179 /* CouponService.swift in Sources */,
 				E89FA2422446FBF500CBA834 /* OrderEnum.swift in Sources */,
 				E8A48AB623ACB7C400B53DBB /* UIColor+Extension.swift in Sources */,
@@ -1055,6 +1090,7 @@
 				E8E48E19238E258A00003B8A /* GitHubSignupViewModel.swift in Sources */,
 				E8A48ABC23ACC66A00B53DBB /* AddressService.swift in Sources */,
 				E8304DCD23B9D4C100414CEA /* PetrelVideoCell.swift in Sources */,
+				E80BA723244BFA5600474F9A /* AnimationListModel.swift in Sources */,
 				E8E48DE8238B9B9A00003B8A /* SceneDelegate.swift in Sources */,
 				E89FA23E2446F55B00CBA834 /* OrderListViewController.swift in Sources */,
 				E89B7F8623A32FD700C9EA0F /* OSSManager.swift in Sources */,
@@ -1242,6 +1278,7 @@
 					"$(PROJECT_DIR)/Petrel/Frameworks",
 				);
 				INFOPLIST_FILE = Petrel/Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1268,6 +1305,7 @@
 					"$(PROJECT_DIR)/Petrel/Frameworks",
 				);
 				INFOPLIST_FILE = Petrel/Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

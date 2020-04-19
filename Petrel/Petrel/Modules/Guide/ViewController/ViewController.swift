@@ -142,7 +142,9 @@ class ViewController: UIViewController {
                 self?.navigationController?.pushViewController(orderMain, animated: true)
                 break
             case .animation:
-                
+                let animateion = AnimationIndexViewController()
+                animateion.hidesBottomBarWhenPushed = true
+                self?.navigationController?.pushViewController(animateion, animated: true)
                 break
             }
             }).disposed(by: disposeBag)

@@ -40,4 +40,13 @@ enum OrderStatusType {
 enum OrderOperateType {
     case batch
     case single
+    
+    var title: String {
+        switch self {
+        case .batch:
+            return "取消"
+        case .single:
+            return "批量"
+        }
+    }
 }
