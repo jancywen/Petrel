@@ -9,6 +9,8 @@
 import Foundation
 
 enum AnimationType {
+    // tableview cell 出场动画
+    /// 缩放
     case scale
     case rotation
     case move
@@ -22,6 +24,12 @@ enum AnimationType {
     case shrinkToTop
     case layDown
     case rote
+    
+    // cell 编辑
+    case edit
+    //view 动画
+    /// 转场动画
+    case transition
 }
 
 extension AnimationType {
@@ -53,6 +61,12 @@ extension AnimationType {
             return "收缩至顶"
         case .layDown:
             return "掉落"
+            
+        case .edit:
+            return "cell编辑模式"
+            
+        case .transition:
+            return "转场动画"
         }
     }
 }

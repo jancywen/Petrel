@@ -40,7 +40,10 @@ class AnimationIndexViewController: UIViewController {
                                                .springList,
                                                .shrinkToTop,
                                                .layDown,
-                                               .rote])
+                                               .rote]),
+            AnimationSectionModel.table(title: "table view cell 编辑模式", items: [.edit]),
+            AnimationSectionModel.view(title:"view 动画",
+                                       items: [.transition])
         ])
         
         let datasource = RxTableViewSectionedReloadDataSource<AnimationSectionModel> ( configureCell:{ (ds, tv, ip, item) -> UITableViewCell in
@@ -60,7 +63,19 @@ class AnimationIndexViewController: UIViewController {
 extension AnimationIndexViewController {
     func selectedCell(_ model: AnimationType) {
         type = model
-        tableView.reloadData()
+        tableView.reloadSections([0], animationStyle: .automatic)
+//        tableView.reloadData()
+        
+        switch model {
+        case .edit:
+            navigationController?.pushViewController(EditCellViewController(), animated: true)
+            break
+        case .transition:
+            navigationController?.pushViewController(TransitionViewController(), animated: true)
+            break
+        default:
+            break
+        }
     }
     func displayCell(_ cell: UITableViewCell, _ indexPath: IndexPath) {
         switch type {
@@ -193,7 +208,7 @@ extension AnimationIndexViewController {
             }) { (_) in
                 cell.layer.add(animation, forKey: "rotationYkey")
             }
-            
+        default: break
         }
     }
 }

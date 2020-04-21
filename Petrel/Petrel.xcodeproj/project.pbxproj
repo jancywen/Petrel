@@ -11,6 +11,10 @@
 		E80BA7202449B84E00474F9A /* AnimationIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BA71F2449B84E00474F9A /* AnimationIndexViewController.swift */; };
 		E80BA723244BFA5600474F9A /* AnimationListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BA722244BFA5600474F9A /* AnimationListModel.swift */; };
 		E80BA725244BFAD700474F9A /* AnimationEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BA724244BFAD700474F9A /* AnimationEnum.swift */; };
+		E80BA729244D341D00474F9A /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BA728244D341D00474F9A /* TransitionViewController.swift */; };
+		E80BA72B244D39A700474F9A /* EditCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BA72A244D39A700474F9A /* EditCellViewController.swift */; };
+		E80BA730244D3E1900474F9A /* EditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BA72E244D3E1900474F9A /* EditCell.swift */; };
+		E80BA731244D3E1900474F9A /* EditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E80BA72F244D3E1900474F9A /* EditCell.xib */; };
 		E8154C1023A1E1E200861A86 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8154C0E23A1E1E200861A86 /* MineViewController.swift */; };
 		E8154C1123A1E1E200861A86 /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8154C0F23A1E1E200861A86 /* MineViewController.xib */; };
 		E8154C1423A1E49500861A86 /* MineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8154C1323A1E49500861A86 /* MineViewModel.swift */; };
@@ -151,6 +155,10 @@
 		E80BA71F2449B84E00474F9A /* AnimationIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationIndexViewController.swift; sourceTree = "<group>"; };
 		E80BA722244BFA5600474F9A /* AnimationListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationListModel.swift; sourceTree = "<group>"; };
 		E80BA724244BFAD700474F9A /* AnimationEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationEnum.swift; sourceTree = "<group>"; };
+		E80BA728244D341D00474F9A /* TransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
+		E80BA72A244D39A700474F9A /* EditCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCellViewController.swift; sourceTree = "<group>"; };
+		E80BA72E244D3E1900474F9A /* EditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCell.swift; sourceTree = "<group>"; };
+		E80BA72F244D3E1900474F9A /* EditCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditCell.xib; sourceTree = "<group>"; };
 		E8154C0E23A1E1E200861A86 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		E8154C0F23A1E1E200861A86 /* MineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineViewController.xib; sourceTree = "<group>"; };
 		E8154C1323A1E49500861A86 /* MineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewModel.swift; sourceTree = "<group>"; };
@@ -359,6 +367,8 @@
 			isa = PBXGroup;
 			children = (
 				E80BA71F2449B84E00474F9A /* AnimationIndexViewController.swift */,
+				E80BA728244D341D00474F9A /* TransitionViewController.swift */,
+				E80BA72A244D39A700474F9A /* EditCellViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -370,6 +380,23 @@
 				E80BA724244BFAD700474F9A /* AnimationEnum.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E80BA72C244D3DFA00474F9A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E80BA72D244D3E0000474F9A /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E80BA72D244D3E0000474F9A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E80BA72E244D3E1900474F9A /* EditCell.swift */,
+				E80BA72F244D3E1900474F9A /* EditCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		E8154C0C23A1E19B00861A86 /* ViewController */ = {
@@ -747,6 +774,7 @@
 		E89FA24B244868E100CBA834 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				E80BA72C244D3DFA00474F9A /* View */,
 				E80BA721244BFA0900474F9A /* Model */,
 				E80BA71E2449B81100474F9A /* Controller */,
 			);
@@ -968,6 +996,7 @@
 				E896CFA123C9A615007D5494 /* RealmViewController.xib in Resources */,
 				E8A48AA623AC90F400B53DBB /* SettlementSingleCell.xib in Resources */,
 				E82E6BC223B33B6600DB93C6 /* GoodsDetailTextCell.xib in Resources */,
+				E80BA731244D3E1900474F9A /* EditCell.xib in Resources */,
 				E8E48DEF238B9B9C00003B8A /* Assets.xcassets in Resources */,
 				E8E48DED238B9B9A00003B8A /* Main.storyboard in Resources */,
 				E82E6BBE23B33B1A00DB93C6 /* GoodsDetailContentCell.xib in Resources */,
@@ -1046,6 +1075,7 @@
 				E8E48E0B238C02D700003B8A /* GitHubAPI.swift in Sources */,
 				E8A48AC023ACCA9100B53DBB /* GoodsModel.swift in Sources */,
 				E8A48DEB242C5B73008B34F1 /* OneParamViewController.swift in Sources */,
+				E80BA72B244D39A700474F9A /* EditCellViewController.swift in Sources */,
 				E8A48A8723A9EDEA00B53DBB /* UploadAPI.swift in Sources */,
 				E8A48AB223ACB35E00B53DBB /* SettlementTitleHeader.swift in Sources */,
 				E8A48DF1242C5BA8008B34F1 /* SetContextViewController.swift in Sources */,
@@ -1055,6 +1085,7 @@
 				E891EC552390E0070071EFAB /* NetworkService.swift in Sources */,
 				E8A48A9923AC7ADE00B53DBB /* SettlementShopCell.swift in Sources */,
 				E891EC532390CC1A0071EFAB /* Reactive+MJRefreshComponent.swift in Sources */,
+				E80BA730244D3E1900474F9A /* EditCell.swift in Sources */,
 				E8154C1623A203E800861A86 /* MineServiceModel.swift in Sources */,
 				E82E6BBD23B33B1A00DB93C6 /* GoodsDetailContentCell.swift in Sources */,
 				E82E6BB023B330A900DB93C6 /* GoodsDetailViewController.swift in Sources */,
@@ -1098,6 +1129,7 @@
 				E8A48AA123AC7D3200B53DBB /* SettlementSubtotalCell.swift in Sources */,
 				E891EC512390BF3F0071EFAB /* ActivityIndicator.swift in Sources */,
 				E8A48AB023AC98D300B53DBB /* SettlementViewModel.swift in Sources */,
+				E80BA729244D341D00474F9A /* TransitionViewController.swift in Sources */,
 				E82E6BC123B33B6600DB93C6 /* GoodsDetailTextCell.swift in Sources */,
 				E82E6BC923B33C4000DB93C6 /* GoodsDetailCommentCell.swift in Sources */,
 				E82E6BD023B33ED800DB93C6 /* GoodsAPI.swift in Sources */,
