@@ -15,6 +15,9 @@
 		E80BA72B244D39A700474F9A /* EditCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BA72A244D39A700474F9A /* EditCellViewController.swift */; };
 		E80BA730244D3E1900474F9A /* EditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BA72E244D3E1900474F9A /* EditCell.swift */; };
 		E80BA731244D3E1900474F9A /* EditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E80BA72F244D3E1900474F9A /* EditCell.xib */; };
+		E80CAC0C245D3D1500F1FFA0 /* RenderContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80CAC0B245D3D1500F1FFA0 /* RenderContentViewController.swift */; };
+		E80CAC0E245D3D6600F1FFA0 /* ContentRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80CAC0D245D3D6600F1FFA0 /* ContentRenderer.swift */; };
+		E80CAC11245D452F00F1FFA0 /* MetalIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80CAC10245D452F00F1FFA0 /* MetalIndexViewController.swift */; };
 		E8154C1023A1E1E200861A86 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8154C0E23A1E1E200861A86 /* MineViewController.swift */; };
 		E8154C1123A1E1E200861A86 /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8154C0F23A1E1E200861A86 /* MineViewController.xib */; };
 		E8154C1423A1E49500861A86 /* MineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8154C1323A1E49500861A86 /* MineViewModel.swift */; };
@@ -62,8 +65,6 @@
 		E891EC552390E0070071EFAB /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E891EC542390E0070071EFAB /* NetworkService.swift */; };
 		E891EC572390E12F0071EFAB /* RefreshViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E891EC562390E12F0071EFAB /* RefreshViewModel.swift */; };
 		E891EC592390E46A0071EFAB /* RefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E891EC582390E46A0071EFAB /* RefreshViewController.swift */; };
-		E896CFA023C9A615007D5494 /* RealmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896CF9E23C9A614007D5494 /* RealmViewController.swift */; };
-		E896CFA123C9A615007D5494 /* RealmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E896CF9F23C9A614007D5494 /* RealmViewController.xib */; };
 		E89B7F7F23A32BF800C9EA0F /* OSSAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B7F7E23A32BF800C9EA0F /* OSSAPI.swift */; };
 		E89B7F8123A32D6800C9EA0F /* OSSAccessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B7F8023A32D6800C9EA0F /* OSSAccessModel.swift */; };
 		E89B7F8323A32E8600C9EA0F /* OSSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B7F8223A32E8600C9EA0F /* OSSService.swift */; };
@@ -159,6 +160,9 @@
 		E80BA72A244D39A700474F9A /* EditCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCellViewController.swift; sourceTree = "<group>"; };
 		E80BA72E244D3E1900474F9A /* EditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCell.swift; sourceTree = "<group>"; };
 		E80BA72F244D3E1900474F9A /* EditCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditCell.xib; sourceTree = "<group>"; };
+		E80CAC0B245D3D1500F1FFA0 /* RenderContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderContentViewController.swift; sourceTree = "<group>"; };
+		E80CAC0D245D3D6600F1FFA0 /* ContentRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRenderer.swift; sourceTree = "<group>"; };
+		E80CAC10245D452F00F1FFA0 /* MetalIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalIndexViewController.swift; sourceTree = "<group>"; };
 		E8154C0E23A1E1E200861A86 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		E8154C0F23A1E1E200861A86 /* MineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineViewController.xib; sourceTree = "<group>"; };
 		E8154C1323A1E49500861A86 /* MineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewModel.swift; sourceTree = "<group>"; };
@@ -208,8 +212,6 @@
 		E891EC542390E0070071EFAB /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E891EC562390E12F0071EFAB /* RefreshViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshViewModel.swift; sourceTree = "<group>"; };
 		E891EC582390E46A0071EFAB /* RefreshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshViewController.swift; sourceTree = "<group>"; };
-		E896CF9E23C9A614007D5494 /* RealmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmViewController.swift; sourceTree = "<group>"; };
-		E896CF9F23C9A614007D5494 /* RealmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RealmViewController.xib; sourceTree = "<group>"; };
 		E89B7F7E23A32BF800C9EA0F /* OSSAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSSAPI.swift; sourceTree = "<group>"; };
 		E89B7F8023A32D6800C9EA0F /* OSSAccessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSSAccessModel.swift; sourceTree = "<group>"; };
 		E89B7F8223A32E8600C9EA0F /* OSSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSSService.swift; sourceTree = "<group>"; };
@@ -399,6 +401,40 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		E80CAC08245D25D200F1FFA0 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				E80CAC0F245D451900F1FFA0 /* Index */,
+				E80CAC0A245D3CB700F1FFA0 /* RenderViewContent */,
+				E80CAC09245D266400F1FFA0 /* Render2DTriangle */,
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
+		E80CAC09245D266400F1FFA0 /* Render2DTriangle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Render2DTriangle;
+			sourceTree = "<group>";
+		};
+		E80CAC0A245D3CB700F1FFA0 /* RenderViewContent */ = {
+			isa = PBXGroup;
+			children = (
+				E80CAC0B245D3D1500F1FFA0 /* RenderContentViewController.swift */,
+				E80CAC0D245D3D6600F1FFA0 /* ContentRenderer.swift */,
+			);
+			path = RenderViewContent;
+			sourceTree = "<group>";
+		};
+		E80CAC0F245D451900F1FFA0 /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				E80CAC10245D452F00F1FFA0 /* MetalIndexViewController.swift */,
+			);
+			path = Index;
+			sourceTree = "<group>";
+		};
 		E8154C0C23A1E19B00861A86 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,6 +471,7 @@
 		E81C5B5723A0E015000D681C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E80CAC08245D25D200F1FFA0 /* Metal */,
 				E89FA24B244868E100CBA834 /* Animation */,
 				E89FA2392446F3E600CBA834 /* Order */,
 				E88EBF102429E8AB008F2FF7 /* Guide */,
@@ -878,8 +915,6 @@
 				E8A48A8823A9EF8000B53DBB /* UploadViewController.swift */,
 				E8A48A8923A9EF8000B53DBB /* UploadViewController.xib */,
 				E8B613D023C48DAE00DABC25 /* IJKMediaViewController.swift */,
-				E896CF9E23C9A614007D5494 /* RealmViewController.swift */,
-				E896CF9F23C9A614007D5494 /* RealmViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -993,7 +1028,6 @@
 				E8E48DF2238B9B9C00003B8A /* LaunchScreen.storyboard in Resources */,
 				E8CDE3C323BDF17A00F762B7 /* MineServiceCell.xib in Resources */,
 				E8A48A9E23AC7B5C00B53DBB /* SettlementGoodsCell.xib in Resources */,
-				E896CFA123C9A615007D5494 /* RealmViewController.xib in Resources */,
 				E8A48AA623AC90F400B53DBB /* SettlementSingleCell.xib in Resources */,
 				E82E6BC223B33B6600DB93C6 /* GoodsDetailTextCell.xib in Resources */,
 				E80BA731244D3E1900474F9A /* EditCell.xib in Resources */,
@@ -1067,7 +1101,6 @@
 				E891EC592390E46A0071EFAB /* RefreshViewController.swift in Sources */,
 				E8304DDB23BC907100414CEA /* FPSLabel.swift in Sources */,
 				E8E48E0F238C066900003B8A /* GitHubViewModel.swift in Sources */,
-				E896CFA023C9A615007D5494 /* RealmViewController.swift in Sources */,
 				E8304DD923B9E06B00414CEA /* UIButton+Extension.swift in Sources */,
 				E8E48DEA238B9B9A00003B8A /* ViewController.swift in Sources */,
 				E8154C1423A1E49500861A86 /* MineViewModel.swift in Sources */,
@@ -1081,6 +1114,7 @@
 				E8A48DF1242C5BA8008B34F1 /* SetContextViewController.swift in Sources */,
 				E83ED23D23ADB1820088B179 /* CouponModel.swift in Sources */,
 				E8E48E07238BC54E00003B8A /* DouBanService.swift in Sources */,
+				E80CAC0C245D3D1500F1FFA0 /* RenderContentViewController.swift in Sources */,
 				E89FA2452447038900CBA834 /* DeviceTool.swift in Sources */,
 				E891EC552390E0070071EFAB /* NetworkService.swift in Sources */,
 				E8A48A9923AC7ADE00B53DBB /* SettlementShopCell.swift in Sources */,
@@ -1113,6 +1147,7 @@
 				E8E48E0D238C04A200003B8A /* GitHubModel.swift in Sources */,
 				E8154C1023A1E1E200861A86 /* MineViewController.swift in Sources */,
 				E8304DD523B9DF8600414CEA /* PetrelConst.swift in Sources */,
+				E80CAC0E245D3D6600F1FFA0 /* ContentRenderer.swift in Sources */,
 				E81C5709239B9083000D681C /* UITableView+Extension.swift in Sources */,
 				E8B613D123C48DAE00DABC25 /* IJKMediaViewController.swift in Sources */,
 				E89B7F7F23A32BF800C9EA0F /* OSSAPI.swift in Sources */,
@@ -1158,6 +1193,7 @@
 				E82E6BCD23B33DCB00DB93C6 /* GoodsInfo.swift in Sources */,
 				E8304DD123B9DA9400414CEA /* UIImageView+Extension.swift in Sources */,
 				E8A48AA523AC90F400B53DBB /* SettlementSingleCell.swift in Sources */,
+				E80CAC11245D452F00F1FFA0 /* MetalIndexViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

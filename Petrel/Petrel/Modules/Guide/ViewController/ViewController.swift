@@ -11,51 +11,6 @@ import RxCocoa
 import RxSwift
 import SwiftyJSON
 
-enum ItemType {
-    case douban
-    case github
-    case signup
-    case refresh
-    case upload
-    case settlement
-    case goodsDetail
-    case ijk
-    case realm
-    case url
-    case segment
-    case animation
-}
-
-extension ItemType {
-    var title: String {
-        switch self {
-        case .douban:
-            return "豆瓣音乐"
-        case .github:
-            return "Github"
-        case .signup:
-            return "注册验证"
-        case .refresh:
-            return "下拉刷新 上提加载"
-        case .upload:
-            return "异步上传 排序"
-        case .settlement:
-            return "商品结算"
-        case .goodsDetail:
-            return "商品详情"
-        case .ijk:
-            return "ijk播放器"
-        case .realm:
-            return "realm数据库"
-        case .url:
-            return "URLNavigator应用"
-        case .segment:
-            return "JXSegmentView"
-        case .animation:
-            return "动画"
-        }
-    }
-}
 
 class ViewController: UIViewController {
 
@@ -74,7 +29,8 @@ class ViewController: UIViewController {
                 .realm,
                 .url,
                 .segment,
-                .animation ]
+                .animation,
+                .metal ]
     }
     
     override func viewDidLoad() {
@@ -86,7 +42,8 @@ class ViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         view.addSubview(tableView)
          
-        Signal.just(items).asObservable().bind(to: tableView.rx.items) { (tableView, row, element) in
+        let items = Observable.just(self.items)
+        items.bind(to: tableView.rx.items) { (tableView, row, element) in
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
             
             cell.textLabel?.text = element.title
@@ -131,9 +88,10 @@ class ViewController: UIViewController {
                 ijk.hidesBottomBarWhenPushed = true
                 self?.navigationController?.pushViewController(ijk, animated: true)
             case .realm:
-                let realm = RealmViewController()
-                realm.hidesBottomBarWhenPushed = true
-                self?.navigationController?.pushViewController(realm, animated: true)
+                break
+//                let realm = RealmViewController()
+//                realm.hidesBottomBarWhenPushed = true
+//                self?.navigationController?.pushViewController(realm, animated: true)
             case .url:
                 navigator.push("petrel://urlnav")
             case .segment:
@@ -146,6 +104,10 @@ class ViewController: UIViewController {
                 animateion.hidesBottomBarWhenPushed = true
                 self?.navigationController?.pushViewController(animateion, animated: true)
                 break
+            case .metal:
+                let metal = MetalIndexViewController()
+                metal.hidesBottomBarWhenPushed = true
+                self?.navigationController?.pushViewController(metal, animated: true)
             }
             }).disposed(by: disposeBag)
         
@@ -154,3 +116,51 @@ class ViewController: UIViewController {
 
 }
 
+enum ItemType {
+    case douban
+    case github
+    case signup
+    case refresh
+    case upload
+    case settlement
+    case goodsDetail
+    case ijk
+    case realm
+    case url
+    case segment
+    case animation
+    case metal
+}
+
+extension ItemType {
+    var title: String {
+        switch self {
+        case .douban:
+            return "豆瓣音乐"
+        case .github:
+            return "Github"
+        case .signup:
+            return "注册验证"
+        case .refresh:
+            return "下拉刷新 上提加载"
+        case .upload:
+            return "异步上传 排序"
+        case .settlement:
+            return "商品结算"
+        case .goodsDetail:
+            return "商品详情"
+        case .ijk:
+            return "ijk播放器"
+        case .realm:
+            return "realm数据库"
+        case .url:
+            return "URLNavigator应用"
+        case .segment:
+            return "JXSegmentView"
+        case .animation:
+            return "动画"
+        case .metal:
+            return "重金属"
+        }
+    }
+}

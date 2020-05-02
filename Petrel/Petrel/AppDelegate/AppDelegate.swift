@@ -8,7 +8,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
-import RealmSwift
+//import RealmSwift
 import URLNavigator
 
 let formatter: DateFormatter = {
@@ -27,10 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared.enable = true
         // reset the realm on each app launch
-        let realm = try! Realm()
-        try! realm.write {
-            realm.deleteAll()
-        }
+//        let realm = try! Realm()
+//        try! realm.write {
+//            realm.deleteAll()
+//        }
         
         
         /// 设置路由
