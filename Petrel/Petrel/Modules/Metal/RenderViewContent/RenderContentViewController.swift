@@ -16,9 +16,11 @@ class RenderContentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+
+        title = "Render View's Content"
         
         _view = MTKView(frame: view.bounds, device: MTLCreateSystemDefaultDevice())
+        view = _view
         _view.enableSetNeedsDisplay = true
 //        _view.device = MTLCreateSystemDefaultDevice()
         _view.clearColor = MTLClearColorMake(0, 0.5, 1.0, 1.0)
@@ -27,6 +29,5 @@ class RenderContentViewController: UIViewController {
         _render.mtkView(_view, drawableSizeWillChange: _view.drawableSize)
         _view.delegate = _render
         
-        view.addSubview(_view)
     }
 }

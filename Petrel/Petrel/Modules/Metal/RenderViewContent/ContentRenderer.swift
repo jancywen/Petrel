@@ -28,6 +28,7 @@ extension ContentRenderer:MTKViewDelegate {
     }
     
     func draw(in view: MTKView) {
+        //渲染过程描述符
         guard let renderPassDescriptor = view.currentRenderPassDescriptor else {return}
         let commandBuffer = _commandQueue?.makeCommandBuffer()
         let commandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: renderPassDescriptor)

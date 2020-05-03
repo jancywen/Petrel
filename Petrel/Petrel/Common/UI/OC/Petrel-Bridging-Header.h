@@ -3,3 +3,11 @@
 //
 
 #import "PKTextView.h"
+
+#import "TriangleRenderTypes.h"
+
+#import "AAPLRenderer.h"
+#import "AAPLShaderTypes.h"
+
+#import "AAPLImage.h"
+#import "ImageShaderTypes.h"
