@@ -88,14 +88,14 @@ class ImageRenderer: NSObject, MTKViewDelegate {
         let textureDescriptor = MTLTextureDescriptor()
         textureDescriptor.width = Int(image.size.width)
         textureDescriptor.height = Int(image.size.height)
-        textureDescriptor.pixelFormat = .bgra8Unorm
+        textureDescriptor.pixelFormat = .rgba8Unorm
         textureDescriptor.usage = .shaderRead
         textureDescriptor.textureType = .type2D
         
         self.texture = mtkView.device?.makeTexture(descriptor: textureDescriptor)
         
         let region = MTLRegionMake2D(0, 0, textureDescriptor.width, textureDescriptor.height)
-        guard let raw = load(image) else {
+        guard let raw = image.load() else {
             return
         }
         self.texture.replace(region: region, mipmapLevel: 0, withBytes: raw, bytesPerRow: 4 * textureDescriptor.width)
@@ -103,7 +103,6 @@ class ImageRenderer: NSObject, MTKViewDelegate {
     
     //MARK: MTKViewDelegate
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
-//        self.viewportSize = vector_uint2(arrayLiteral: [UInt32(size.width), UInt32(size.height)])
         viewportSize = vector_uint2(UInt32(size.width), UInt32(size.height))
     }
     
@@ -137,21 +136,5 @@ class ImageRenderer: NSObject, MTKViewDelegate {
         // 提交
         commandBuffer?.commit()
         
-    }
-
-    
-    func load(_ image: UIImage) -> UnsafeMutableRawPointer? {
-        // 1获取图片的CGImageRef
-        guard let spriteImage = image.cgImage else {
-            return nil
-        }
-        // 2 读取图片的大小
-        let width = spriteImage.width
-        let height = spriteImage.height
-        let spriteData = calloc(width * height * 4, MemoryLayout<UInt8>.size) //rgba共4个byte
-        let spriteContext = CGContext(data: spriteData, width: width, height: height, bitsPerComponent: 8, bytesPerRow: width * 4, space: spriteImage.colorSpace!, bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue)
-        // 3在CGContextRef上绘图
-        spriteContext?.draw(spriteImage, in: CGRect(x: 0, y: 0, width: CGFloat(width), height: CGFloat(height)))
-        return spriteData
     }
 }

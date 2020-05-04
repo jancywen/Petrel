@@ -29,6 +29,16 @@
 		E80CAC2F245E68E300F1FFA0 /* RenderImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80CAC2E245E68E300F1FFA0 /* RenderImageViewController.swift */; };
 		E80CAC33245E7D9A00F1FFA0 /* Image.tga in Resources */ = {isa = PBXBuildFile; fileRef = E80CAC32245E7D9A00F1FFA0 /* Image.tga */; };
 		E80CAC39245E97BC00F1FFA0 /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = E80CAC38245E97BC00F1FFA0 /* girl.png */; };
+		E80CAC3D245EB02600F1FFA0 /* TransformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80CAC3B245EB02600F1FFA0 /* TransformViewController.swift */; };
+		E80CAC3E245EB02600F1FFA0 /* TransformViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E80CAC3C245EB02600F1FFA0 /* TransformViewController.xib */; };
+		E80CAC40245EB08200F1FFA0 /* TransformRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80CAC3F245EB08200F1FFA0 /* TransformRenderer.swift */; };
+		E80CAC43245EB0C800F1FFA0 /* transformshaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = E80CAC42245EB0C800F1FFA0 /* transformshaders.metal */; };
+		E80CAC45245EB6AD00F1FFA0 /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80CAC44245EB6AD00F1FFA0 /* UIImage+extension.swift */; };
+		E80CAC49245FBA9C00F1FFA0 /* PanoramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80CAC47245FBA9C00F1FFA0 /* PanoramaViewController.swift */; };
+		E80CAC4A245FBA9C00F1FFA0 /* PanoramaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E80CAC48245FBA9C00F1FFA0 /* PanoramaViewController.xib */; };
+		E80CAC4C245FBBD600F1FFA0 /* PanoramaRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80CAC4B245FBBD600F1FFA0 /* PanoramaRenderer.swift */; };
+		E80CAC4F245FBC0A00F1FFA0 /* panoramashaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = E80CAC4E245FBC0A00F1FFA0 /* panoramashaders.metal */; };
+		E80CAC52245FBD0500F1FFA0 /* panorama.png in Resources */ = {isa = PBXBuildFile; fileRef = E80CAC51245FBD0500F1FFA0 /* panorama.png */; };
 		E8154C1023A1E1E200861A86 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8154C0E23A1E1E200861A86 /* MineViewController.swift */; };
 		E8154C1123A1E1E200861A86 /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8154C0F23A1E1E200861A86 /* MineViewController.xib */; };
 		E8154C1423A1E49500861A86 /* MineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8154C1323A1E49500861A86 /* MineViewModel.swift */; };
@@ -190,6 +200,18 @@
 		E80CAC2E245E68E300F1FFA0 /* RenderImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderImageViewController.swift; sourceTree = "<group>"; };
 		E80CAC32245E7D9A00F1FFA0 /* Image.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = Image.tga; sourceTree = "<group>"; };
 		E80CAC38245E97BC00F1FFA0 /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl.png; sourceTree = "<group>"; };
+		E80CAC3B245EB02600F1FFA0 /* TransformViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformViewController.swift; sourceTree = "<group>"; };
+		E80CAC3C245EB02600F1FFA0 /* TransformViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransformViewController.xib; sourceTree = "<group>"; };
+		E80CAC3F245EB08200F1FFA0 /* TransformRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformRenderer.swift; sourceTree = "<group>"; };
+		E80CAC41245EB0A400F1FFA0 /* TransformShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransformShaderTypes.h; sourceTree = "<group>"; };
+		E80CAC42245EB0C800F1FFA0 /* transformshaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = transformshaders.metal; sourceTree = "<group>"; };
+		E80CAC44245EB6AD00F1FFA0 /* UIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
+		E80CAC47245FBA9C00F1FFA0 /* PanoramaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoramaViewController.swift; sourceTree = "<group>"; };
+		E80CAC48245FBA9C00F1FFA0 /* PanoramaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PanoramaViewController.xib; sourceTree = "<group>"; };
+		E80CAC4B245FBBD600F1FFA0 /* PanoramaRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoramaRenderer.swift; sourceTree = "<group>"; };
+		E80CAC4D245FBBEF00F1FFA0 /* PanoramaShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PanoramaShaderTypes.h; sourceTree = "<group>"; };
+		E80CAC4E245FBC0A00F1FFA0 /* panoramashaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = panoramashaders.metal; sourceTree = "<group>"; };
+		E80CAC51245FBD0500F1FFA0 /* panorama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panorama.png; sourceTree = "<group>"; };
 		E8154C0E23A1E1E200861A86 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		E8154C0F23A1E1E200861A86 /* MineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineViewController.xib; sourceTree = "<group>"; };
 		E8154C1323A1E49500861A86 /* MineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewModel.swift; sourceTree = "<group>"; };
@@ -431,10 +453,13 @@
 		E80CAC08245D25D200F1FFA0 /* Metal */ = {
 			isa = PBXGroup;
 			children = (
+				E80CAC50245FBCE100F1FFA0 /* Resources */,
 				E80CAC0F245D451900F1FFA0 /* Index */,
 				E80CAC0A245D3CB700F1FFA0 /* RenderViewContent */,
 				E80CAC09245D266400F1FFA0 /* Render2DTriangle */,
 				E80CAC25245E605300F1FFA0 /* RenderImage */,
+				E80CAC3A245EAA2600F1FFA0 /* Transform */,
+				E80CAC46245FBA4F00F1FFA0 /* Panorama */,
 			);
 			path = Metal;
 			sourceTree = "<group>";
@@ -482,8 +507,6 @@
 		E80CAC25245E605300F1FFA0 /* RenderImage */ = {
 			isa = PBXGroup;
 			children = (
-				E80CAC38245E97BC00F1FFA0 /* girl.png */,
-				E80CAC32245E7D9A00F1FFA0 /* Image.tga */,
 				E80CAC27245E609D00F1FFA0 /* AAPLImage.h */,
 				E80CAC26245E609D00F1FFA0 /* AAPLImage.m */,
 				E80CAC29245E64C200F1FFA0 /* ImageShaderTypes.h */,
@@ -492,6 +515,40 @@
 				E80CAC2E245E68E300F1FFA0 /* RenderImageViewController.swift */,
 			);
 			path = RenderImage;
+			sourceTree = "<group>";
+		};
+		E80CAC3A245EAA2600F1FFA0 /* Transform */ = {
+			isa = PBXGroup;
+			children = (
+				E80CAC41245EB0A400F1FFA0 /* TransformShaderTypes.h */,
+				E80CAC42245EB0C800F1FFA0 /* transformshaders.metal */,
+				E80CAC3F245EB08200F1FFA0 /* TransformRenderer.swift */,
+				E80CAC3B245EB02600F1FFA0 /* TransformViewController.swift */,
+				E80CAC3C245EB02600F1FFA0 /* TransformViewController.xib */,
+			);
+			path = Transform;
+			sourceTree = "<group>";
+		};
+		E80CAC46245FBA4F00F1FFA0 /* Panorama */ = {
+			isa = PBXGroup;
+			children = (
+				E80CAC4D245FBBEF00F1FFA0 /* PanoramaShaderTypes.h */,
+				E80CAC4E245FBC0A00F1FFA0 /* panoramashaders.metal */,
+				E80CAC4B245FBBD600F1FFA0 /* PanoramaRenderer.swift */,
+				E80CAC47245FBA9C00F1FFA0 /* PanoramaViewController.swift */,
+				E80CAC48245FBA9C00F1FFA0 /* PanoramaViewController.xib */,
+			);
+			path = Panorama;
+			sourceTree = "<group>";
+		};
+		E80CAC50245FBCE100F1FFA0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E80CAC51245FBD0500F1FFA0 /* panorama.png */,
+				E80CAC38245E97BC00F1FFA0 /* girl.png */,
+				E80CAC32245E7D9A00F1FFA0 /* Image.tga */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		E8154C0C23A1E19B00861A86 /* ViewController */ = {
@@ -743,7 +800,6 @@
 			children = (
 				E848F5B623B0BDAB00AC06BB /* PKTextView.h */,
 				E848F5B723B0BDAB00AC06BB /* PKTextView.m */,
-				E848F5B523B0BDAA00AC06BB /* Petrel-Bridging-Header.h */,
 			);
 			path = OC;
 			sourceTree = "<group>";
@@ -936,6 +992,7 @@
 		E8E48DF9238B9F9000003B8A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E848F5B523B0BDAA00AC06BB /* Petrel-Bridging-Header.h */,
 				E8E48DEB238B9B9A00003B8A /* Main.storyboard */,
 				E8E48DEE238B9B9C00003B8A /* Assets.xcassets */,
 				E8E48DF0238B9B9C00003B8A /* LaunchScreen.storyboard */,
@@ -1012,6 +1069,7 @@
 				E8304DD823B9E06B00414CEA /* UIButton+Extension.swift */,
 				E8CDE3BD23BDED8400F762B7 /* UICollectionView+Extension.swift */,
 				E8297687242C528900C70788 /* UIViewController+Extension.swift */,
+				E80CAC44245EB6AD00F1FFA0 /* UIImage+extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1077,7 +1135,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E80CAC52245FBD0500F1FFA0 /* panorama.png in Resources */,
 				E8154C1123A1E1E200861A86 /* MineViewController.xib in Resources */,
+				E80CAC4A245FBA9C00F1FFA0 /* PanoramaViewController.xib in Resources */,
 				E82E6BCA23B33C4000DB93C6 /* GoodsDetailCommentCell.xib in Resources */,
 				E80CAC39245E97BC00F1FFA0 /* girl.png in Resources */,
 				E89FA24A244853EF00CBA834 /* OrderListCell.xib in Resources */,
@@ -1092,6 +1152,7 @@
 				E82E6BC223B33B6600DB93C6 /* GoodsDetailTextCell.xib in Resources */,
 				E80BA731244D3E1900474F9A /* EditCell.xib in Resources */,
 				E8E48DEF238B9B9C00003B8A /* Assets.xcassets in Resources */,
+				E80CAC3E245EB02600F1FFA0 /* TransformViewController.xib in Resources */,
 				E8E48DED238B9B9A00003B8A /* Main.storyboard in Resources */,
 				E80CAC33245E7D9A00F1FFA0 /* Image.tga in Resources */,
 				E82E6BBE23B33B1A00DB93C6 /* GoodsDetailContentCell.xib in Resources */,
@@ -1172,6 +1233,7 @@
 				E80CAC20245D7FD800F1FFA0 /* AAPLRenderer.m in Sources */,
 				E80BA72B244D39A700474F9A /* EditCellViewController.swift in Sources */,
 				E8A48A8723A9EDEA00B53DBB /* UploadAPI.swift in Sources */,
+				E80CAC49245FBA9C00F1FFA0 /* PanoramaViewController.swift in Sources */,
 				E80CAC17245D5DA900F1FFA0 /* TriangleShaders.metal in Sources */,
 				E80CAC15245D505C00F1FFA0 /* TriangleRenderer.swift in Sources */,
 				E8A48AB223ACB35E00B53DBB /* SettlementTitleHeader.swift in Sources */,
@@ -1180,6 +1242,7 @@
 				E8E48E07238BC54E00003B8A /* DouBanService.swift in Sources */,
 				E80CAC0C245D3D1500F1FFA0 /* RenderContentViewController.swift in Sources */,
 				E89FA2452447038900CBA834 /* DeviceTool.swift in Sources */,
+				E80CAC3D245EB02600F1FFA0 /* TransformViewController.swift in Sources */,
 				E891EC552390E0070071EFAB /* NetworkService.swift in Sources */,
 				E8A48A9923AC7ADE00B53DBB /* SettlementShopCell.swift in Sources */,
 				E891EC532390CC1A0071EFAB /* Reactive+MJRefreshComponent.swift in Sources */,
@@ -1199,6 +1262,7 @@
 				E89FA2422446FBF500CBA834 /* OrderEnum.swift in Sources */,
 				E8A48AB623ACB7C400B53DBB /* UIColor+Extension.swift in Sources */,
 				E8A48DED242C5B7F008B34F1 /* MultiParamViewController.swift in Sources */,
+				E80CAC43245EB0C800F1FFA0 /* transformshaders.metal in Sources */,
 				E8E48DE6238B9B9A00003B8A /* AppDelegate.swift in Sources */,
 				E89FA249244853EF00CBA834 /* OrderListCell.swift in Sources */,
 				E8CDE3C223BDF17A00F762B7 /* MineServiceCell.swift in Sources */,
@@ -1215,6 +1279,7 @@
 				E81C5709239B9083000D681C /* UITableView+Extension.swift in Sources */,
 				E8B613D123C48DAE00DABC25 /* IJKMediaViewController.swift in Sources */,
 				E80CAC2F245E68E300F1FFA0 /* RenderImageViewController.swift in Sources */,
+				E80CAC4F245FBC0A00F1FFA0 /* panoramashaders.metal in Sources */,
 				E89B7F7F23A32BF800C9EA0F /* OSSAPI.swift in Sources */,
 				E8E48E03238BAAAA00003B8A /* DouBan.swift in Sources */,
 				E8297684242B2BCB00C70788 /* URLNavViewController.swift in Sources */,
@@ -1250,9 +1315,11 @@
 				E891EC572390E12F0071EFAB /* RefreshViewModel.swift in Sources */,
 				E8297686242B392100C70788 /* PetrelProtocol.swift in Sources */,
 				E80CAC28245E609D00F1FFA0 /* AAPLImage.m in Sources */,
+				E80CAC45245EB6AD00F1FFA0 /* UIImage+extension.swift in Sources */,
 				E8A48A9123AC725A00B53DBB /* SettlementViewController.swift in Sources */,
 				E8304DCF23B9D50D00414CEA /* PetrelPicCell.swift in Sources */,
 				E80CAC21245D7FD800F1FFA0 /* AAPLShaders.metal in Sources */,
+				E80CAC4C245FBBD600F1FFA0 /* PanoramaRenderer.swift in Sources */,
 				E8E48E09238BD84D00003B8A /* GitHubViewController.swift in Sources */,
 				E82E6BB923B33ACD00DB93C6 /* GoodsDetailBannerCell.swift in Sources */,
 				E82E6BB523B3350600DB93C6 /* GoodsDetailViewModel.swift in Sources */,
@@ -1264,6 +1331,7 @@
 				E8304DD123B9DA9400414CEA /* UIImageView+Extension.swift in Sources */,
 				E8A48AA523AC90F400B53DBB /* SettlementSingleCell.swift in Sources */,
 				E80CAC11245D452F00F1FFA0 /* MetalIndexViewController.swift in Sources */,
+				E80CAC40245EB08200F1FFA0 /* TransformRenderer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1423,7 +1491,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Petrel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Petrel/Common/UI/OC/Petrel-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Petrel/Resource/Petrel-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1450,7 +1518,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Petrel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Petrel/Common/UI/OC/Petrel-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Petrel/Resource/Petrel-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

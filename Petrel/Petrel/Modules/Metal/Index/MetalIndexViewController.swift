@@ -25,7 +25,12 @@ class MetalIndexViewController: UIViewController {
         tableView = UITableView(frame: self.view.frame, style: .plain)
         view.addSubview(tableView)
         
-        let items = Observable<[MetalIndexType]>.just([.content, .triangle_oc, .triangle_swift, .image])
+        let items = Observable<[MetalIndexType]>.just([.content,
+                                                       .triangle_oc,
+                                                       .triangle_swift,
+                                                       .image,
+                                                       .transform,
+                                                       .panorama])
         
         items.bind(to: tableView.rx.items){(tv, row, element) in
             let cell = tv.dequeueCell(UITableViewCell.self)!
@@ -55,6 +60,10 @@ class MetalIndexViewController: UIViewController {
         case .image:
             let image = RenderImageViewController()
             navigationController?.pushViewController(image, animated: true)
+        case .transform:
+            navigationController?.pushViewController(TransformViewController(), animated: true)
+        case .panorama:
+            navigationController?.pushViewController(PanoramaViewController(), animated: true)
         }
     }
 }
@@ -65,6 +74,8 @@ enum MetalIndexType {
     case triangle_oc
     case triangle_swift
     case image
+    case transform
+    case panorama
 }
 
 extension MetalIndexType {
@@ -76,6 +87,10 @@ extension MetalIndexType {
             return "2D Triangle"
         case .image:
             return "图片纹理"
+        case .transform:
+            return "3D 转换"
+        case .panorama:
+            return "全景图片"
         }
     }
 }

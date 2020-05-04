@@ -11,3 +11,5 @@
 
 #import "AAPLImage.h"
 #import "ImageShaderTypes.h"
+
+#import "TransformShaderTypes.h"
