@@ -45,9 +45,6 @@ class TransformViewController: UIViewController {
         super.viewDidDisappear(animated)
         timer.invalidate()
     }
-    deinit {
-        
-    }
     @IBAction func switchAction(_ sender: Any) {
         
         render.isX = xswitch.isOn
