@@ -7,10 +7,11 @@
 //
 
 import UIKit
-import IJKMediaFramework
+//import IJKMediaFramework
 
 class IJKMediaViewController: UIViewController {
     
+    /*
     var player: IJKFFMoviePlayerController!
     
     override func viewDidLoad() {
@@ -47,6 +48,6 @@ class IJKMediaViewController: UIViewController {
         //关闭播放器
         self.player.shutdown()
     }
-    
+    */
     
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		129293AB2485E80000320E21 /* SideslipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129293AA2485E80000320E21 /* SideslipCell.swift */; };
+		129293AD2485E9C700320E21 /* SideslipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129293AC2485E9C700320E21 /* SideslipViewController.swift */; };
+		129293B02485EB8700320E21 /* SideslipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129293AE2485EB8700320E21 /* SideslipTableViewCell.swift */; };
+		129293B12485EB8700320E21 /* SideslipTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129293AF2485EB8700320E21 /* SideslipTableViewCell.xib */; };
 		2A3D6589BD6EBAE1B98427BA /* Pods_Petrel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3118BFED44B34FDA6F5DAC3 /* Pods_Petrel.framework */; };
 		E80BA7202449B84E00474F9A /* AnimationIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BA71F2449B84E00474F9A /* AnimationIndexViewController.swift */; };
 		E80BA723244BFA5600474F9A /* AnimationListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BA722244BFA5600474F9A /* AnimationListModel.swift */; };
@@ -144,7 +148,6 @@
 		E8B613CF23C48D6D00DABC25 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E8B613C123C48CF100DABC25 /* libz.tbd */; };
 		E8B613D123C48DAE00DABC25 /* IJKMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B613D023C48DAE00DABC25 /* IJKMediaViewController.swift */; };
 		E8B613D323C492CA00DABC25 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E8B613D223C492CA00DABC25 /* libc++.tbd */; };
-		E8BFA86D23C5814000339768 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BFA86C23C5814000339768 /* IJKMediaFramework.framework */; };
 		E8CDE3BE23BDED8400F762B7 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CDE3BD23BDED8400F762B7 /* UICollectionView+Extension.swift */; };
 		E8CDE3C223BDF17A00F762B7 /* MineServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CDE3C023BDF17A00F762B7 /* MineServiceCell.swift */; };
 		E8CDE3C323BDF17A00F762B7 /* MineServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8CDE3C123BDF17A00F762B7 /* MineServiceCell.xib */; };
@@ -171,6 +174,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		129293AA2485E80000320E21 /* SideslipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideslipCell.swift; sourceTree = "<group>"; };
+		129293AC2485E9C700320E21 /* SideslipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideslipViewController.swift; sourceTree = "<group>"; };
+		129293AE2485EB8700320E21 /* SideslipTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideslipTableViewCell.swift; sourceTree = "<group>"; };
+		129293AF2485EB8700320E21 /* SideslipTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideslipTableViewCell.xib; sourceTree = "<group>"; };
 		596C9AD521EA110965C3E361 /* Pods-Petrel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petrel.release.xcconfig"; path = "Target Support Files/Pods-Petrel/Pods-Petrel.release.xcconfig"; sourceTree = "<group>"; };
 		B20B8CCFC0BB3EC91717A71E /* Pods-Petrel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petrel.debug.xcconfig"; path = "Target Support Files/Pods-Petrel/Pods-Petrel.debug.xcconfig"; sourceTree = "<group>"; };
 		E3118BFED44B34FDA6F5DAC3 /* Pods_Petrel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Petrel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -319,7 +326,6 @@
 		E8B613CC23C48D3D00DABC25 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		E8B613D023C48DAE00DABC25 /* IJKMediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IJKMediaViewController.swift; sourceTree = "<group>"; };
 		E8B613D223C492CA00DABC25 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		E8BFA86C23C5814000339768 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		E8CDE3BD23BDED8400F762B7 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		E8CDE3C023BDF17A00F762B7 /* MineServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineServiceCell.swift; sourceTree = "<group>"; };
 		E8CDE3C123BDF17A00F762B7 /* MineServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineServiceCell.xib; sourceTree = "<group>"; };
@@ -355,7 +361,6 @@
 				E8B613D323C492CA00DABC25 /* libc++.tbd in Frameworks */,
 				E8B613CF23C48D6D00DABC25 /* libz.tbd in Frameworks */,
 				E8B613CE23C48D6300DABC25 /* libbz2.tbd in Frameworks */,
-				E8BFA86D23C5814000339768 /* IJKMediaFramework.framework in Frameworks */,
 				E8B613BF23C48CD500DABC25 /* CoreVideo.framework in Frameworks */,
 				E8B613CD23C48D3D00DABC25 /* VideoToolbox.framework in Frameworks */,
 				E8B613CB23C48D3200DABC25 /* UIKit.framework in Frameworks */,
@@ -374,6 +379,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		129293A72485E79100320E21 /* BannerCell */ = {
+			isa = PBXGroup;
+			children = (
+				E8304DCA23B9D3EE00414CEA /* PetrelBannerCell.swift */,
+				E8304DCC23B9D4C100414CEA /* PetrelVideoCell.swift */,
+				E8304DCE23B9D50D00414CEA /* PetrelPicCell.swift */,
+				E8304DD623B9DFFF00414CEA /* PrtrelPlayerView.swift */,
+			);
+			path = BannerCell;
+			sourceTree = "<group>";
+		};
+		129293A82485E7C200320E21 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				129293A92485E7CC00320E21 /* SideslipCell */,
+				129293A72485E79100320E21 /* BannerCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		129293A92485E7CC00320E21 /* SideslipCell */ = {
+			isa = PBXGroup;
+			children = (
+				129293AA2485E80000320E21 /* SideslipCell.swift */,
+			);
+			path = SideslipCell;
+			sourceTree = "<group>";
+		};
 		15305BA81CD157F811A30387 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +453,7 @@
 				E80BA71F2449B84E00474F9A /* AnimationIndexViewController.swift */,
 				E80BA728244D341D00474F9A /* TransitionViewController.swift */,
 				E80BA72A244D39A700474F9A /* EditCellViewController.swift */,
+				129293AC2485E9C700320E21 /* SideslipViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -446,6 +480,8 @@
 			children = (
 				E80BA72E244D3E1900474F9A /* EditCell.swift */,
 				E80BA72F244D3E1900474F9A /* EditCell.xib */,
+				129293AE2485EB8700320E21 /* SideslipTableViewCell.swift */,
+				129293AF2485EB8700320E21 /* SideslipTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -786,11 +822,8 @@
 		E8304DC923B9D3CE00414CEA /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				129293A82485E7C200320E21 /* Cell */,
 				E848F5B423B0BD8900AC06BB /* OC */,
-				E8304DCA23B9D3EE00414CEA /* PetrelBannerCell.swift */,
-				E8304DCC23B9D4C100414CEA /* PetrelVideoCell.swift */,
-				E8304DCE23B9D50D00414CEA /* PetrelPicCell.swift */,
-				E8304DD623B9DFFF00414CEA /* PrtrelPlayerView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -933,14 +966,6 @@
 			path = Animation;
 			sourceTree = "<group>";
 		};
-		E8B613B323C48C4000DABC25 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E8BFA86C23C5814000339768 /* IJKMediaFramework.framework */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
 		E8CDE3BF23BDF14E00F762B7 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -979,7 +1004,6 @@
 		E8E48DE4238B9B9A00003B8A /* Petrel */ = {
 			isa = PBXGroup;
 			children = (
-				E8B613B323C48C4000DABC25 /* Frameworks */,
 				E8304DC823B9D29D00414CEA /* Common */,
 				E81C5B5723A0E015000D681C /* Modules */,
 				E8E48DFE238BA0C600003B8A /* Configuration */,
@@ -1155,6 +1179,7 @@
 				E80CAC3E245EB02600F1FFA0 /* TransformViewController.xib in Resources */,
 				E8E48DED238B9B9A00003B8A /* Main.storyboard in Resources */,
 				E80CAC33245E7D9A00F1FFA0 /* Image.tga in Resources */,
+				129293B12485EB8700320E21 /* SideslipTableViewCell.xib in Resources */,
 				E82E6BBE23B33B1A00DB93C6 /* GoodsDetailContentCell.xib in Resources */,
 				E8A48AAA23AC91A500B53DBB /* SettlementNoteCell.xib in Resources */,
 				E8A48A9623AC797D00B53DBB /* SettlementAddressCell.xib in Resources */,
@@ -1227,6 +1252,7 @@
 				E8E48DEA238B9B9A00003B8A /* ViewController.swift in Sources */,
 				E8154C1423A1E49500861A86 /* MineViewModel.swift in Sources */,
 				E82E6BC523B33BB300DB93C6 /* GoodsDetailCouponCell.swift in Sources */,
+				129293B02485EB8700320E21 /* SideslipTableViewCell.swift in Sources */,
 				E8E48E0B238C02D700003B8A /* GitHubAPI.swift in Sources */,
 				E8A48AC023ACCA9100B53DBB /* GoodsModel.swift in Sources */,
 				E8A48DEB242C5B73008B34F1 /* OneParamViewController.swift in Sources */,
@@ -1241,6 +1267,7 @@
 				E83ED23D23ADB1820088B179 /* CouponModel.swift in Sources */,
 				E8E48E07238BC54E00003B8A /* DouBanService.swift in Sources */,
 				E80CAC0C245D3D1500F1FFA0 /* RenderContentViewController.swift in Sources */,
+				129293AD2485E9C700320E21 /* SideslipViewController.swift in Sources */,
 				E89FA2452447038900CBA834 /* DeviceTool.swift in Sources */,
 				E80CAC3D245EB02600F1FFA0 /* TransformViewController.swift in Sources */,
 				E891EC552390E0070071EFAB /* NetworkService.swift in Sources */,
@@ -1282,6 +1309,7 @@
 				E80CAC4F245FBC0A00F1FFA0 /* panoramashaders.metal in Sources */,
 				E89B7F7F23A32BF800C9EA0F /* OSSAPI.swift in Sources */,
 				E8E48E03238BAAAA00003B8A /* DouBan.swift in Sources */,
+				129293AB2485E80000320E21 /* SideslipCell.swift in Sources */,
 				E8297684242B2BCB00C70788 /* URLNavViewController.swift in Sources */,
 				E8E48E19238E258A00003B8A /* GitHubSignupViewModel.swift in Sources */,
 				E8A48ABC23ACC66A00B53DBB /* AddressService.swift in Sources */,

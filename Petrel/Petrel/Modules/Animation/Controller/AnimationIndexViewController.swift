@@ -41,7 +41,9 @@ class AnimationIndexViewController: UIViewController {
                                                .shrinkToTop,
                                                .layDown,
                                                .rote]),
-            AnimationSectionModel.table(title: "table view cell 编辑模式", items: [.edit]),
+            AnimationSectionModel.table(title: "table view cell 编辑模式",
+                                        items: [.edit,
+                                                .sideslip]),
             AnimationSectionModel.view(title:"view 动画",
                                        items: [.transition])
         ])
@@ -73,6 +75,8 @@ extension AnimationIndexViewController {
         case .transition:
             navigationController?.pushViewController(TransitionViewController(), animated: true)
             break
+        case .sideslip:
+            navigationController?.pushViewController(SideslipViewController(), animated: true)
         default:
             break
         }

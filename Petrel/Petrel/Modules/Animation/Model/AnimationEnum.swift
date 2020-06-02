@@ -30,6 +30,9 @@ enum AnimationType {
     //view 动画
     /// 转场动画
     case transition
+    
+    /// 侧滑按钮
+    case sideslip
 }
 
 extension AnimationType {
@@ -67,6 +70,8 @@ extension AnimationType {
             
         case .transition:
             return "转场动画"
+        case .sideslip:
+            return "侧滑"
         }
     }
 }
