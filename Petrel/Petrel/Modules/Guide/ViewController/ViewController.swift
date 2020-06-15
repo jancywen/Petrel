@@ -30,7 +30,8 @@ class ViewController: UIViewController {
                 .url,
                 .segment,
                 .animation,
-                .metal ]
+                .metal,
+                .richtext ]
     }
     
     override func viewDidLoad() {
@@ -108,6 +109,10 @@ class ViewController: UIViewController {
                 let metal = MetalIndexViewController()
                 metal.hidesBottomBarWhenPushed = true
                 self?.navigationController?.pushViewController(metal, animated: true)
+            case .richtext:
+                let rich = RichTextViewController()
+                rich.hidesBottomBarWhenPushed = true
+                self?.navigationController?.pushViewController(rich, animated: true)
             }
             }).disposed(by: disposeBag)
         
@@ -130,6 +135,7 @@ enum ItemType {
     case segment
     case animation
     case metal
+    case richtext
 }
 
 extension ItemType {
@@ -161,6 +167,8 @@ extension ItemType {
             return "动画"
         case .metal:
             return "重金属"
+        case .richtext:
+            return "富文本"
         }
     }
 }

@@ -38,5 +38,8 @@ target 'Petrel' do
 
 pod 'JXSegmentedView'
 
+# 异步编程库
+pod 'PromiseKit'
+
 end
 
