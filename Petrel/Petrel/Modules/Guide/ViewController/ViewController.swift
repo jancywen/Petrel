@@ -31,7 +31,8 @@ class ViewController: UIViewController {
                 .segment,
                 .animation,
                 .metal,
-                .richtext ]
+                .richtext,
+                .promise ]
     }
     
     override func viewDidLoad() {
@@ -113,6 +114,10 @@ class ViewController: UIViewController {
                 let rich = RichTextViewController()
                 rich.hidesBottomBarWhenPushed = true
                 self?.navigationController?.pushViewController(rich, animated: true)
+            case .promise:
+                let promise = PromiseViewController()
+                promise.hidesBottomBarWhenPushed = true
+                self?.navigationController?.pushViewController(promise, animated: true)
             }
             }).disposed(by: disposeBag)
         
@@ -136,6 +141,7 @@ enum ItemType {
     case animation
     case metal
     case richtext
+    case promise
 }
 
 extension ItemType {
@@ -169,6 +175,8 @@ extension ItemType {
             return "重金属"
         case .richtext:
             return "富文本"
+        case .promise:
+            return "异步编程库PromiseKit"
         }
     }
 }

@@ -40,6 +40,6 @@ pod 'JXSegmentedView'
 
 # 异步编程库
 pod 'PromiseKit'
-
+pod "PromiseKit/UIKit", "~> 6.0"
 end
 

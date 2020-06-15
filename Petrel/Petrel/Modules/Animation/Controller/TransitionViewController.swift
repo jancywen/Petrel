@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PromiseKit
 
 class TransitionViewController: UIViewController {
 
@@ -29,7 +30,7 @@ class TransitionViewController: UIViewController {
         let transition = CATransition()
         transition.duration = 0.25
         transition.type = CATransitionType.push //推送类型
-        transition.subtype = CATransitionSubtype.fromLeft //从左侧
+        transition.subtype = CATransitionSubtype.fromRight //从左侧
         self.view.exchangeSubview(at: 1, withSubviewAt: 0)
         self.view.layer.add(transition, forKey: nil)
     }
