@@ -16,6 +16,18 @@
 		129293B02485EB8700320E21 /* SideslipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129293AE2485EB8700320E21 /* SideslipTableViewCell.swift */; };
 		129293B12485EB8700320E21 /* SideslipTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129293AF2485EB8700320E21 /* SideslipTableViewCell.xib */; };
 		2A3D6589BD6EBAE1B98427BA /* Pods_Petrel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3118BFED44B34FDA6F5DAC3 /* Pods_Petrel.framework */; };
+		E44EBCE224BFF25E0024FB6B /* TokenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44EBCE124BFF25E0024FB6B /* TokenViewModel.swift */; };
+		E4E37C5E24C13D1A00728508 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E37C5D24C13D1A00728508 /* TokenModel.swift */; };
+		E4E37C6124C1517C00728508 /* TokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E37C5F24C1517C00728508 /* TokenViewController.swift */; };
+		E4E37C6224C1517C00728508 /* TokenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4E37C6024C1517C00728508 /* TokenViewController.xib */; };
+		E4E37C6624C1701000728508 /* TokenProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E37C6424C1701000728508 /* TokenProductCell.swift */; };
+		E4E37C6724C1701000728508 /* TokenProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4E37C6524C1701000728508 /* TokenProductCell.xib */; };
+		E4E37C6A24C1702500728508 /* TokenMarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E37C6824C1702500728508 /* TokenMarketCell.swift */; };
+		E4E37C6B24C1702500728508 /* TokenMarketCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4E37C6924C1702500728508 /* TokenMarketCell.xib */; };
+		E4E37C6D24C1728600728508 /* Token.json in Resources */ = {isa = PBXBuildFile; fileRef = E4E37C6C24C1728600728508 /* Token.json */; };
+		E4E37C6F24C1804D00728508 /* MoyaProvider+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E37C6E24C1804D00728508 /* MoyaProvider+Rx.swift */; };
+		E4E37C7324C197B400728508 /* PetrelTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E37C7224C197B400728508 /* PetrelTargetType.swift */; };
+		E4E37C7624C19AE000728508 /* TokenAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E37C7524C19AE000728508 /* TokenAPI.swift */; };
 		E80BA7202449B84E00474F9A /* AnimationIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BA71F2449B84E00474F9A /* AnimationIndexViewController.swift */; };
 		E80BA723244BFA5600474F9A /* AnimationListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BA722244BFA5600474F9A /* AnimationListModel.swift */; };
 		E80BA725244BFAD700474F9A /* AnimationEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BA724244BFAD700474F9A /* AnimationEnum.swift */; };
@@ -189,6 +201,18 @@
 		596C9AD521EA110965C3E361 /* Pods-Petrel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petrel.release.xcconfig"; path = "Target Support Files/Pods-Petrel/Pods-Petrel.release.xcconfig"; sourceTree = "<group>"; };
 		B20B8CCFC0BB3EC91717A71E /* Pods-Petrel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petrel.debug.xcconfig"; path = "Target Support Files/Pods-Petrel/Pods-Petrel.debug.xcconfig"; sourceTree = "<group>"; };
 		E3118BFED44B34FDA6F5DAC3 /* Pods_Petrel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Petrel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E44EBCE124BFF25E0024FB6B /* TokenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenViewModel.swift; sourceTree = "<group>"; };
+		E4E37C5D24C13D1A00728508 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
+		E4E37C5F24C1517C00728508 /* TokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenViewController.swift; sourceTree = "<group>"; };
+		E4E37C6024C1517C00728508 /* TokenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TokenViewController.xib; sourceTree = "<group>"; };
+		E4E37C6424C1701000728508 /* TokenProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenProductCell.swift; sourceTree = "<group>"; };
+		E4E37C6524C1701000728508 /* TokenProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TokenProductCell.xib; sourceTree = "<group>"; };
+		E4E37C6824C1702500728508 /* TokenMarketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenMarketCell.swift; sourceTree = "<group>"; };
+		E4E37C6924C1702500728508 /* TokenMarketCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TokenMarketCell.xib; sourceTree = "<group>"; };
+		E4E37C6C24C1728600728508 /* Token.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Token.json; sourceTree = "<group>"; };
+		E4E37C6E24C1804D00728508 /* MoyaProvider+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Rx.swift"; sourceTree = "<group>"; };
+		E4E37C7224C197B400728508 /* PetrelTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetrelTargetType.swift; sourceTree = "<group>"; };
+		E4E37C7524C19AE000728508 /* TokenAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenAPI.swift; sourceTree = "<group>"; };
 		E80BA71F2449B84E00474F9A /* AnimationIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationIndexViewController.swift; sourceTree = "<group>"; };
 		E80BA722244BFA5600474F9A /* AnimationListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationListModel.swift; sourceTree = "<group>"; };
 		E80BA724244BFAD700474F9A /* AnimationEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationEnum.swift; sourceTree = "<group>"; };
@@ -446,6 +470,71 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E44EBCDD24BFF2130024FB6B /* Token */ = {
+			isa = PBXGroup;
+			children = (
+				E4E37C7424C19ACA00728508 /* API */,
+				E4E37C6C24C1728600728508 /* Token.json */,
+				E4E37C5A24C13CFB00728508 /* Model */,
+				E44EBCE024BFF2360024FB6B /* Controller */,
+				E44EBCDF24BFF22D0024FB6B /* ViewModel */,
+				E44EBCDE24BFF2250024FB6B /* View */,
+			);
+			path = Token;
+			sourceTree = "<group>";
+		};
+		E44EBCDE24BFF2250024FB6B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E4E37C6324C16FF500728508 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E44EBCDF24BFF22D0024FB6B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E44EBCE124BFF25E0024FB6B /* TokenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E44EBCE024BFF2360024FB6B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4E37C5F24C1517C00728508 /* TokenViewController.swift */,
+				E4E37C6024C1517C00728508 /* TokenViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E4E37C5A24C13CFB00728508 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4E37C5D24C13D1A00728508 /* TokenModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4E37C6324C16FF500728508 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E4E37C6424C1701000728508 /* TokenProductCell.swift */,
+				E4E37C6524C1701000728508 /* TokenProductCell.xib */,
+				E4E37C6824C1702500728508 /* TokenMarketCell.swift */,
+				E4E37C6924C1702500728508 /* TokenMarketCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E4E37C7424C19ACA00728508 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E4E37C7524C19AE000728508 /* TokenAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		E80BA71D2449B7DD00474F9A /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -678,6 +767,7 @@
 		E82E6BA623B3093200DB93C6 /* Goods */ = {
 			isa = PBXGroup;
 			children = (
+				E44EBCDD24BFF2130024FB6B /* Token */,
 				E82E6BAC23B309E100DB93C6 /* GoodsDetail */,
 				E82E6BA723B3095100DB93C6 /* Settlement */,
 			);
@@ -808,6 +898,7 @@
 		E82E6BCE23B33EC100DB93C6 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E4E37C6E24C1804D00728508 /* MoyaProvider+Rx.swift */,
 				E858321B23B867CA000CC046 /* Target */,
 				E858321823B8533B000CC046 /* Plugin */,
 			);
@@ -857,6 +948,8 @@
 			isa = PBXGroup;
 			children = (
 				E858321C23B867E5000CC046 /* CustomTargetType.swift */,
+				E8A48ABD23ACC9B100B53DBB /* TargetType+Extension.swift */,
+				E4E37C7224C197B400728508 /* PetrelTargetType.swift */,
 			);
 			path = Target;
 			sourceTree = "<group>";
@@ -1099,7 +1192,6 @@
 				E81C5708239B9083000D681C /* UITableView+Extension.swift */,
 				E8A48AB323ACB45000B53DBB /* UIFont+Extension.swift */,
 				E8A48AB523ACB7C400B53DBB /* UIColor+Extension.swift */,
-				E8A48ABD23ACC9B100B53DBB /* TargetType+Extension.swift */,
 				E8304DD023B9DA9400414CEA /* UIImageView+Extension.swift */,
 				E8304DD223B9DBB800414CEA /* UIApplication+Extension.swift */,
 				E8304DD823B9E06B00414CEA /* UIButton+Extension.swift */,
@@ -1174,6 +1266,7 @@
 				E80CAC52245FBD0500F1FFA0 /* panorama.png in Resources */,
 				E8154C1123A1E1E200861A86 /* MineViewController.xib in Resources */,
 				E80CAC4A245FBA9C00F1FFA0 /* PanoramaViewController.xib in Resources */,
+				E4E37C6D24C1728600728508 /* Token.json in Resources */,
 				E82E6BCA23B33C4000DB93C6 /* GoodsDetailCommentCell.xib in Resources */,
 				E80CAC39245E97BC00F1FFA0 /* girl.png in Resources */,
 				E89FA24A244853EF00CBA834 /* OrderListCell.xib in Resources */,
@@ -1184,12 +1277,15 @@
 				E8A48A8B23A9EF8000B53DBB /* UploadViewController.xib in Resources */,
 				E8E48DF2238B9B9C00003B8A /* LaunchScreen.storyboard in Resources */,
 				E8CDE3C323BDF17A00F762B7 /* MineServiceCell.xib in Resources */,
+				E4E37C6724C1701000728508 /* TokenProductCell.xib in Resources */,
 				E8A48A9E23AC7B5C00B53DBB /* SettlementGoodsCell.xib in Resources */,
 				E8A48AA623AC90F400B53DBB /* SettlementSingleCell.xib in Resources */,
 				E82E6BC223B33B6600DB93C6 /* GoodsDetailTextCell.xib in Resources */,
 				E80BA731244D3E1900474F9A /* EditCell.xib in Resources */,
+				E4E37C6224C1517C00728508 /* TokenViewController.xib in Resources */,
 				E8E48DEF238B9B9C00003B8A /* Assets.xcassets in Resources */,
 				E80CAC3E245EB02600F1FFA0 /* TransformViewController.xib in Resources */,
+				E4E37C6B24C1702500728508 /* TokenMarketCell.xib in Resources */,
 				E8E48DED238B9B9A00003B8A /* Main.storyboard in Resources */,
 				E80CAC33245E7D9A00F1FFA0 /* Image.tga in Resources */,
 				124D7C4724931A3B008EEE24 /* RichTextViewController.xib in Resources */,
@@ -1279,6 +1375,7 @@
 				E80CAC15245D505C00F1FFA0 /* TriangleRenderer.swift in Sources */,
 				E8A48AB223ACB35E00B53DBB /* SettlementTitleHeader.swift in Sources */,
 				E8A48DF1242C5BA8008B34F1 /* SetContextViewController.swift in Sources */,
+				E4E37C7324C197B400728508 /* PetrelTargetType.swift in Sources */,
 				E83ED23D23ADB1820088B179 /* CouponModel.swift in Sources */,
 				E8E48E07238BC54E00003B8A /* DouBanService.swift in Sources */,
 				E80CAC0C245D3D1500F1FFA0 /* RenderContentViewController.swift in Sources */,
@@ -1312,11 +1409,14 @@
 				E8E48E05238BC19200003B8A /* DouBanViewController.swift in Sources */,
 				E8CDE3C623BE05BD00F762B7 /* LeftAlignmentLayout.swift in Sources */,
 				E8304DD323B9DBB800414CEA /* UIApplication+Extension.swift in Sources */,
+				E4E37C6F24C1804D00728508 /* MoyaProvider+Rx.swift in Sources */,
 				E8A48DE9242C5B1D008B34F1 /* NoParamViewController.swift in Sources */,
 				E8A48A9D23AC7B5C00B53DBB /* SettlementGoodsCell.swift in Sources */,
+				E4E37C6A24C1702500728508 /* TokenMarketCell.swift in Sources */,
 				E8A48A9523AC797D00B53DBB /* SettlementAddressCell.swift in Sources */,
 				E8E48E0D238C04A200003B8A /* GitHubModel.swift in Sources */,
 				E8154C1023A1E1E200861A86 /* MineViewController.swift in Sources */,
+				E4E37C6624C1701000728508 /* TokenProductCell.swift in Sources */,
 				E8304DD523B9DF8600414CEA /* PetrelConst.swift in Sources */,
 				E80CAC0E245D3D6600F1FFA0 /* ContentRenderer.swift in Sources */,
 				E81C5709239B9083000D681C /* UITableView+Extension.swift in Sources */,
@@ -1331,6 +1431,7 @@
 				E8A48ABC23ACC66A00B53DBB /* AddressService.swift in Sources */,
 				E8304DCD23B9D4C100414CEA /* PetrelVideoCell.swift in Sources */,
 				E80BA723244BFA5600474F9A /* AnimationListModel.swift in Sources */,
+				E44EBCE224BFF25E0024FB6B /* TokenViewModel.swift in Sources */,
 				E8E48DE8238B9B9A00003B8A /* SceneDelegate.swift in Sources */,
 				E89FA23E2446F55B00CBA834 /* OrderListViewController.swift in Sources */,
 				E89B7F8623A32FD700C9EA0F /* OSSManager.swift in Sources */,
@@ -1339,6 +1440,7 @@
 				E8A48AA123AC7D3200B53DBB /* SettlementSubtotalCell.swift in Sources */,
 				E891EC512390BF3F0071EFAB /* ActivityIndicator.swift in Sources */,
 				E8A48AB023AC98D300B53DBB /* SettlementViewModel.swift in Sources */,
+				E4E37C5E24C13D1A00728508 /* TokenModel.swift in Sources */,
 				E80BA729244D341D00474F9A /* TransitionViewController.swift in Sources */,
 				E82E6BC123B33B6600DB93C6 /* GoodsDetailTextCell.swift in Sources */,
 				E82E6BC923B33C4000DB93C6 /* GoodsDetailCommentCell.swift in Sources */,
@@ -1358,6 +1460,7 @@
 				E8297688242C528900C70788 /* UIViewController+Extension.swift in Sources */,
 				E891EC572390E12F0071EFAB /* RefreshViewModel.swift in Sources */,
 				E8297686242B392100C70788 /* PetrelProtocol.swift in Sources */,
+				E4E37C7624C19AE000728508 /* TokenAPI.swift in Sources */,
 				E80CAC28245E609D00F1FFA0 /* AAPLImage.m in Sources */,
 				E80CAC45245EB6AD00F1FFA0 /* UIImage+extension.swift in Sources */,
 				E8A48A9123AC725A00B53DBB /* SettlementViewController.swift in Sources */,
@@ -1369,6 +1472,7 @@
 				E82E6BB523B3350600DB93C6 /* GoodsDetailViewModel.swift in Sources */,
 				E8A48A8A23A9EF8000B53DBB /* UploadViewController.swift in Sources */,
 				E83ED23923ADAF160088B179 /* CouponAPI.swift in Sources */,
+				E4E37C6124C1517C00728508 /* TokenViewController.swift in Sources */,
 				E8CDE3BE23BDED8400F762B7 /* UICollectionView+Extension.swift in Sources */,
 				E82E6BCD23B33DCB00DB93C6 /* GoodsInfo.swift in Sources */,
 				E80CAC13245D503900F1FFA0 /* RenderTriangleViewController.swift in Sources */,

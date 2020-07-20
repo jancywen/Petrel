@@ -17,6 +17,9 @@ final class StatusCodePlugin: PluginType {
     
     func didReceive(_ result: Result<Response, MoyaError>, target: TargetType) {
         
+        
+        print("处理code")
+        
         guard case let Result.success(response) = result else { return }
         guard let code = response.response?.statusCode else { return }
         switch code {

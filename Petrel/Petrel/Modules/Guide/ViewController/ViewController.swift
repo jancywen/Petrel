@@ -82,7 +82,11 @@ class ViewController: UIViewController {
                 settlement.hidesBottomBarWhenPushed = true
                 self?.navigationController?.pushViewController(settlement, animated: true)
             case .goodsDetail:
-                let detail = GoodsDetailViewController(goodsId: "")
+//                let detail = GoodsDetailViewController(goodsId: "")
+//                detail.hidesBottomBarWhenPushed = true
+//                self?.navigationController?.pushViewController(detail, animated: true)
+                
+                let detail = TokenViewController()
                 detail.hidesBottomBarWhenPushed = true
                 self?.navigationController?.pushViewController(detail, animated: true)
             case .ijk:

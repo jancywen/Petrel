@@ -8,6 +8,7 @@
 
 import Moya
 import RxSwift
+import SwiftyJSON
 
 final class GoodsService {
     
@@ -35,6 +36,42 @@ final class GoodsService {
             }
             let response = try? result.value?.filterSuccessfulStatusCodes()
         }
-        
     }
+    
+    func queryTokenList() -> Observable<Token> {
+        provider.rx.request(MultiTarget(GoodsAPI.token))
+            .filterSuccessfulStatusCodes()
+            .map(to: Token.self)
+            .asObservable()
+            .catchError { (error) -> Observable<Token> in
+                if let path = Bundle.main.path(forResource: "Token", ofType: "json"),
+                    let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
+                    let json = try? JSON(data: data, options: .mutableContainers),
+                    let token = Token(jsonData: json) {
+                    return Observable.just(token)
+                }
+                
+//                let path = Bundle.main.path(forResource: "Token", ofType: "json")!
+//                let url = URL(fileURLWithPath: path)
+//                do {
+//                    let data = try Data(contentsOf: url)
+//                    let json = try JSON(data: data, options: .mutableContainers)
+//                    let token = Token(jsonData: json)
+//                    return Observable.just(token!)
+//                }catch {
+//                    print(error)
+//                }
+                
+                return Observable.empty()
+        }
+    }
+    
+    
+    func querySome() {
+//        provider.rx.converenceRequest(MultiTarget(GoodsAPI.token)).map(<#T##type: Decodable.Protocol##Decodable.Protocol#>, atKeyPath: <#T##String?#>, using: <#T##JSONDecoder#>, failsOnEmptyData: <#T##Bool#>)
+    }
+    
+    
+    
 }
+

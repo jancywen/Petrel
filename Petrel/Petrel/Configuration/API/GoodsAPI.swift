@@ -11,6 +11,7 @@ import Moya
 enum GoodsAPI {
     case detail
     case list
+    case token
 }
 
 
@@ -21,6 +22,8 @@ extension GoodsAPI: TargetType {
             return "detail"
         case .list:
             return "list"
+        case .token:
+            return "token"
         }
     }
     
