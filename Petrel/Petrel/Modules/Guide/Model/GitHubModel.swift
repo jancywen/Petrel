@@ -37,3 +37,13 @@ struct GitHubRepository: ALSwiftyJSONAble {
         description = jsonData["description"].stringValue
     }
 }
+
+
+
+struct item: Codable {
+    var a: String?
+    var b: String?
+}
+
+
+typealias SomeModel = Dictionary<String, item>

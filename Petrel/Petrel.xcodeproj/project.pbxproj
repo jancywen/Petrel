@@ -16,6 +16,16 @@
 		129293B02485EB8700320E21 /* SideslipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129293AE2485EB8700320E21 /* SideslipTableViewCell.swift */; };
 		129293B12485EB8700320E21 /* SideslipTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129293AF2485EB8700320E21 /* SideslipTableViewCell.xib */; };
 		2A3D6589BD6EBAE1B98427BA /* Pods_Petrel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3118BFED44B34FDA6F5DAC3 /* Pods_Petrel.framework */; };
+		E42EB12624C67D7500431E20 /* TransitionAnimationIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42EB12424C67D7500431E20 /* TransitionAnimationIndexViewController.swift */; };
+		E42EB12724C67D7500431E20 /* TransitionAnimationIndexViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E42EB12524C67D7500431E20 /* TransitionAnimationIndexViewController.xib */; };
+		E42EB12A24C6B9AC00431E20 /* OnOffAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42EB12924C6B9AC00431E20 /* OnOffAnimation.swift */; };
+		E42EB12D24C6B9BC00431E20 /* OnOffAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42EB12B24C6B9BC00431E20 /* OnOffAnimationViewController.swift */; };
+		E42EB12E24C6B9BC00431E20 /* OnOffAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E42EB12C24C6B9BC00431E20 /* OnOffAnimationViewController.xib */; };
+		E42EB13224C6CDAE00431E20 /* SystemAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42EB13024C6CDAE00431E20 /* SystemAnimationViewController.swift */; };
+		E42EB13324C6CDAE00431E20 /* SystemAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E42EB13124C6CDAE00431E20 /* SystemAnimationViewController.xib */; };
+		E442C95B24C58C0B00A09177 /* ZoomShotAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442C95A24C58C0B00A09177 /* ZoomShotAnimation.swift */; };
+		E442C95E24C597F400A09177 /* ZoomShotAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442C95C24C597F400A09177 /* ZoomShotAnimationViewController.swift */; };
+		E442C95F24C597F400A09177 /* ZoomShotAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E442C95D24C597F400A09177 /* ZoomShotAnimationViewController.xib */; };
 		E44EBCE224BFF25E0024FB6B /* TokenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44EBCE124BFF25E0024FB6B /* TokenViewModel.swift */; };
 		E4E37C5E24C13D1A00728508 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E37C5D24C13D1A00728508 /* TokenModel.swift */; };
 		E4E37C6124C1517C00728508 /* TokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E37C5F24C1517C00728508 /* TokenViewController.swift */; };
@@ -201,6 +211,16 @@
 		596C9AD521EA110965C3E361 /* Pods-Petrel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petrel.release.xcconfig"; path = "Target Support Files/Pods-Petrel/Pods-Petrel.release.xcconfig"; sourceTree = "<group>"; };
 		B20B8CCFC0BB3EC91717A71E /* Pods-Petrel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petrel.debug.xcconfig"; path = "Target Support Files/Pods-Petrel/Pods-Petrel.debug.xcconfig"; sourceTree = "<group>"; };
 		E3118BFED44B34FDA6F5DAC3 /* Pods_Petrel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Petrel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E42EB12424C67D7500431E20 /* TransitionAnimationIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionAnimationIndexViewController.swift; sourceTree = "<group>"; };
+		E42EB12524C67D7500431E20 /* TransitionAnimationIndexViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransitionAnimationIndexViewController.xib; sourceTree = "<group>"; };
+		E42EB12924C6B9AC00431E20 /* OnOffAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnOffAnimation.swift; sourceTree = "<group>"; };
+		E42EB12B24C6B9BC00431E20 /* OnOffAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnOffAnimationViewController.swift; sourceTree = "<group>"; };
+		E42EB12C24C6B9BC00431E20 /* OnOffAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnOffAnimationViewController.xib; sourceTree = "<group>"; };
+		E42EB13024C6CDAE00431E20 /* SystemAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemAnimationViewController.swift; sourceTree = "<group>"; };
+		E42EB13124C6CDAE00431E20 /* SystemAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SystemAnimationViewController.xib; sourceTree = "<group>"; };
+		E442C95A24C58C0B00A09177 /* ZoomShotAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomShotAnimation.swift; sourceTree = "<group>"; };
+		E442C95C24C597F400A09177 /* ZoomShotAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomShotAnimationViewController.swift; sourceTree = "<group>"; };
+		E442C95D24C597F400A09177 /* ZoomShotAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZoomShotAnimationViewController.xib; sourceTree = "<group>"; };
 		E44EBCE124BFF25E0024FB6B /* TokenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenViewModel.swift; sourceTree = "<group>"; };
 		E4E37C5D24C13D1A00728508 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		E4E37C5F24C1517C00728508 /* TokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenViewController.swift; sourceTree = "<group>"; };
@@ -470,11 +490,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E42EB12824C6B98900431E20 /* OnOffAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E42EB12924C6B9AC00431E20 /* OnOffAnimation.swift */,
+				E42EB12B24C6B9BC00431E20 /* OnOffAnimationViewController.swift */,
+				E42EB12C24C6B9BC00431E20 /* OnOffAnimationViewController.xib */,
+			);
+			path = OnOffAnimation;
+			sourceTree = "<group>";
+		};
+		E42EB12F24C6CD9000431E20 /* SystemAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E42EB13024C6CDAE00431E20 /* SystemAnimationViewController.swift */,
+				E42EB13124C6CDAE00431E20 /* SystemAnimationViewController.xib */,
+			);
+			path = SystemAnimation;
+			sourceTree = "<group>";
+		};
+		E442C95824C58B0800A09177 /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				E80BA72C244D3DFA00474F9A /* View */,
+				E80BA721244BFA0900474F9A /* Model */,
+				E80BA71E2449B81100474F9A /* Controller */,
+			);
+			path = Index;
+			sourceTree = "<group>";
+		};
+		E442C95924C58B5200A09177 /* ZoomShotAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E442C95A24C58C0B00A09177 /* ZoomShotAnimation.swift */,
+				E442C95C24C597F400A09177 /* ZoomShotAnimationViewController.swift */,
+				E442C95D24C597F400A09177 /* ZoomShotAnimationViewController.xib */,
+			);
+			path = ZoomShotAnimation;
+			sourceTree = "<group>";
+		};
 		E44EBCDD24BFF2130024FB6B /* Token */ = {
 			isa = PBXGroup;
 			children = (
-				E4E37C7424C19ACA00728508 /* API */,
 				E4E37C6C24C1728600728508 /* Token.json */,
+				E4E37C7424C19ACA00728508 /* API */,
 				E4E37C5A24C13CFB00728508 /* Model */,
 				E44EBCE024BFF2360024FB6B /* Controller */,
 				E44EBCDF24BFF22D0024FB6B /* ViewModel */,
@@ -551,6 +610,8 @@
 				E80BA728244D341D00474F9A /* TransitionViewController.swift */,
 				E80BA72A244D39A700474F9A /* EditCellViewController.swift */,
 				129293AC2485E9C700320E21 /* SideslipViewController.swift */,
+				E42EB12424C67D7500431E20 /* TransitionAnimationIndexViewController.swift */,
+				E42EB12524C67D7500431E20 /* TransitionAnimationIndexViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1060,9 +1121,10 @@
 		E89FA24B244868E100CBA834 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
-				E80BA72C244D3DFA00474F9A /* View */,
-				E80BA721244BFA0900474F9A /* Model */,
-				E80BA71E2449B81100474F9A /* Controller */,
+				E42EB12F24C6CD9000431E20 /* SystemAnimation */,
+				E42EB12824C6B98900431E20 /* OnOffAnimation */,
+				E442C95924C58B5200A09177 /* ZoomShotAnimation */,
+				E442C95824C58B0800A09177 /* Index */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -1271,6 +1333,7 @@
 				E80CAC39245E97BC00F1FFA0 /* girl.png in Resources */,
 				E89FA24A244853EF00CBA834 /* OrderListCell.xib in Resources */,
 				E82E6BB123B330A900DB93C6 /* GoodsDetailViewController.xib in Resources */,
+				E42EB12E24C6B9BC00431E20 /* OnOffAnimationViewController.xib in Resources */,
 				E829768A242C553F00C70788 /* URLNavViewController.xib in Resources */,
 				12578CCC249730800066AB76 /* PromiseViewController.xib in Resources */,
 				E82E6BC623B33BB300DB93C6 /* GoodsDetailCouponCell.xib in Resources */,
@@ -1288,12 +1351,15 @@
 				E4E37C6B24C1702500728508 /* TokenMarketCell.xib in Resources */,
 				E8E48DED238B9B9A00003B8A /* Main.storyboard in Resources */,
 				E80CAC33245E7D9A00F1FFA0 /* Image.tga in Resources */,
+				E42EB12724C67D7500431E20 /* TransitionAnimationIndexViewController.xib in Resources */,
+				E442C95F24C597F400A09177 /* ZoomShotAnimationViewController.xib in Resources */,
 				124D7C4724931A3B008EEE24 /* RichTextViewController.xib in Resources */,
 				129293B12485EB8700320E21 /* SideslipTableViewCell.xib in Resources */,
 				E82E6BBE23B33B1A00DB93C6 /* GoodsDetailContentCell.xib in Resources */,
 				E8A48AAA23AC91A500B53DBB /* SettlementNoteCell.xib in Resources */,
 				E8A48A9623AC797D00B53DBB /* SettlementAddressCell.xib in Resources */,
 				E8A48AA223AC7D3200B53DBB /* SettlementSubtotalCell.xib in Resources */,
+				E42EB13324C6CDAE00431E20 /* SystemAnimationViewController.xib in Resources */,
 				E8A48A9A23AC7ADE00B53DBB /* SettlementShopCell.xib in Resources */,
 				E8A48A9223AC725A00B53DBB /* SettlementViewController.xib in Resources */,
 				E8A48AAE23AC92B400B53DBB /* SettlementCardCell.xib in Resources */,
@@ -1390,11 +1456,13 @@
 				E82E6BBD23B33B1A00DB93C6 /* GoodsDetailContentCell.swift in Sources */,
 				E82E6BB023B330A900DB93C6 /* GoodsDetailViewController.swift in Sources */,
 				E8304DD723B9DFFF00414CEA /* PrtrelPlayerView.swift in Sources */,
+				E442C95E24C597F400A09177 /* ZoomShotAnimationViewController.swift in Sources */,
 				E8A48DEF242C5B92008B34F1 /* ModelToJsonViewController.swift in Sources */,
 				E8E48E01238BA73D00003B8A /* DouBanAPI.swift in Sources */,
 				E8E48E1E238E523700003B8A /* Reactive+UILabel.swift in Sources */,
 				E82E6BD223B341BD00DB93C6 /* GoodsService.swift in Sources */,
 				E80BA725244BFAD700474F9A /* AnimationEnum.swift in Sources */,
+				E42EB12624C67D7500431E20 /* TransitionAnimationIndexViewController.swift in Sources */,
 				E89B7F8123A32D6800C9EA0F /* OSSAccessModel.swift in Sources */,
 				E80BA7202449B84E00474F9A /* AnimationIndexViewController.swift in Sources */,
 				E83ED23B23ADB0B10088B179 /* CouponService.swift in Sources */,
@@ -1407,9 +1475,11 @@
 				E89FA249244853EF00CBA834 /* OrderListCell.swift in Sources */,
 				E8CDE3C223BDF17A00F762B7 /* MineServiceCell.swift in Sources */,
 				E8E48E05238BC19200003B8A /* DouBanViewController.swift in Sources */,
+				E42EB13224C6CDAE00431E20 /* SystemAnimationViewController.swift in Sources */,
 				E8CDE3C623BE05BD00F762B7 /* LeftAlignmentLayout.swift in Sources */,
 				E8304DD323B9DBB800414CEA /* UIApplication+Extension.swift in Sources */,
 				E4E37C6F24C1804D00728508 /* MoyaProvider+Rx.swift in Sources */,
+				E442C95B24C58C0B00A09177 /* ZoomShotAnimation.swift in Sources */,
 				E8A48DE9242C5B1D008B34F1 /* NoParamViewController.swift in Sources */,
 				E8A48A9D23AC7B5C00B53DBB /* SettlementGoodsCell.swift in Sources */,
 				E4E37C6A24C1702500728508 /* TokenMarketCell.swift in Sources */,
@@ -1452,11 +1522,13 @@
 				E858321A23B854F1000CC046 /* CustomPluginType.swift in Sources */,
 				E8A48AAD23AC92B400B53DBB /* SettlementCardCell.swift in Sources */,
 				E848F5B823B0BDAB00AC06BB /* PKTextView.m in Sources */,
+				E42EB12A24C6B9AC00431E20 /* OnOffAnimation.swift in Sources */,
 				E8E48E16238E1CB800003B8A /* RegisterViewController.swift in Sources */,
 				E8A48ABA23ACC42A00B53DBB /* AddressAPI.swift in Sources */,
 				E858321D23B867E5000CC046 /* CustomTargetType.swift in Sources */,
 				E80CAC2D245E684A00F1FFA0 /* ImageRenderer.swift in Sources */,
 				E8E48E11238C106400003B8A /* GitHubService.swift in Sources */,
+				E42EB12D24C6B9BC00431E20 /* OnOffAnimationViewController.swift in Sources */,
 				E8297688242C528900C70788 /* UIViewController+Extension.swift in Sources */,
 				E891EC572390E12F0071EFAB /* RefreshViewModel.swift in Sources */,
 				E8297686242B392100C70788 /* PetrelProtocol.swift in Sources */,

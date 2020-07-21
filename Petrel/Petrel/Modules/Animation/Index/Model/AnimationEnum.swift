@@ -27,12 +27,15 @@ enum AnimationType {
     
     // cell 编辑
     case edit
+    /// 侧滑按钮
+    case sideslip
+    
     //view 动画
     /// 转场动画
     case transition
-    
-    /// 侧滑按钮
-    case sideslip
+    ///
+    case zoomShot
+
 }
 
 extension AnimationType {
@@ -67,11 +70,14 @@ extension AnimationType {
             
         case .edit:
             return "cell编辑模式"
+        case .sideslip:
+            return "侧滑"
             
         case .transition:
             return "转场动画"
-        case .sideslip:
-            return "侧滑"
+        case .zoomShot:
+            return "缩放"
+        
         }
     }
 }

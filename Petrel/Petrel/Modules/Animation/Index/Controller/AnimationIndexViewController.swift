@@ -72,11 +72,15 @@ extension AnimationIndexViewController {
         case .edit:
             navigationController?.pushViewController(EditCellViewController(), animated: true)
             break
-        case .transition:
-            navigationController?.pushViewController(TransitionViewController(), animated: true)
-            break
         case .sideslip:
             navigationController?.pushViewController(SideslipViewController(), animated: true)
+
+        case .transition:
+            navigationController?.pushViewController(TransitionAnimationIndexViewController(), animated: true)
+            break
+        case .zoomShot:
+            
+            break
         default:
             break
         }
