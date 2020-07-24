@@ -24,8 +24,9 @@ let requestTimeoutClosure = {(endpoint:Endpoint, closure:MoyaProvider.RequestRes
 protocol PetrelTargetType: TargetType { }
 
 extension PetrelTargetType {
-    func request(completion: @escaping Completion) {
+    @discardableResult
+    func request(completion: @escaping Completion)  -> Cancellable {
         let provider = MoyaProvider<Self>(requestClosure:requestTimeoutClosure, plugins: [LogPlugin(), StatusCodePlugin()])
-        provider.request(self, completion: completion)
+        return provider.request(self, completion: completion)
     }
 }

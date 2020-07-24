@@ -1,4 +1,4 @@
-platform :ios, '9.0'
+platform :ios, '11.0'
 use_frameworks!
 
 target 'Petrel' do
@@ -41,5 +41,22 @@ pod 'JXSegmentedView'
 # 异步编程库
 pod 'PromiseKit'
 pod "PromiseKit/UIKit", "~> 6.0"
+
+
+# 权限
+#pod 'SPPermissions/Camera'
+pod 'SPPermissions/PhotoLibrary'
+#pod 'SPPermissions/Notification'
+#pod 'SPPermissions/Microphone'
+#pod 'SPPermissions/Calendar'
+#pod 'SPPermissions/Contacts'
+#pod 'SPPermissions/Reminders'
+#pod 'SPPermissions/SpeechRecognizer'
+#pod 'SPPermissions/Location'
+#pod 'SPPermissions/Motion'
+#pod 'SPPermissions/MediaLibrary'
+#pod 'SPPermissions/Bluetooth'
+#pod 'SPPermissions/Tracking'
+
 end
 

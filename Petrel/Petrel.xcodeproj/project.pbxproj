@@ -23,10 +23,12 @@
 		E42EB12E24C6B9BC00431E20 /* OnOffAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E42EB12C24C6B9BC00431E20 /* OnOffAnimationViewController.xib */; };
 		E42EB13224C6CDAE00431E20 /* SystemAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42EB13024C6CDAE00431E20 /* SystemAnimationViewController.swift */; };
 		E42EB13324C6CDAE00431E20 /* SystemAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E42EB13124C6CDAE00431E20 /* SystemAnimationViewController.xib */; };
+		E4384CB724CAACCE00F78F81 /* PermissionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4384CB624CAACCE00F78F81 /* PermissionsTableViewController.swift */; };
 		E442C95B24C58C0B00A09177 /* ZoomShotAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442C95A24C58C0B00A09177 /* ZoomShotAnimation.swift */; };
 		E442C95E24C597F400A09177 /* ZoomShotAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442C95C24C597F400A09177 /* ZoomShotAnimationViewController.swift */; };
 		E442C95F24C597F400A09177 /* ZoomShotAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E442C95D24C597F400A09177 /* ZoomShotAnimationViewController.xib */; };
 		E44EBCE224BFF25E0024FB6B /* TokenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44EBCE124BFF25E0024FB6B /* TokenViewModel.swift */; };
+		E45015A024C80CBF007D2CDC /* StatusCodePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E450159F24C80CBF007D2CDC /* StatusCodePlugin.swift */; };
 		E4E37C5E24C13D1A00728508 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E37C5D24C13D1A00728508 /* TokenModel.swift */; };
 		E4E37C6124C1517C00728508 /* TokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E37C5F24C1517C00728508 /* TokenViewController.swift */; };
 		E4E37C6224C1517C00728508 /* TokenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4E37C6024C1517C00728508 /* TokenViewController.xib */; };
@@ -218,10 +220,12 @@
 		E42EB12C24C6B9BC00431E20 /* OnOffAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnOffAnimationViewController.xib; sourceTree = "<group>"; };
 		E42EB13024C6CDAE00431E20 /* SystemAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemAnimationViewController.swift; sourceTree = "<group>"; };
 		E42EB13124C6CDAE00431E20 /* SystemAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SystemAnimationViewController.xib; sourceTree = "<group>"; };
+		E4384CB624CAACCE00F78F81 /* PermissionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsTableViewController.swift; sourceTree = "<group>"; };
 		E442C95A24C58C0B00A09177 /* ZoomShotAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomShotAnimation.swift; sourceTree = "<group>"; };
 		E442C95C24C597F400A09177 /* ZoomShotAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomShotAnimationViewController.swift; sourceTree = "<group>"; };
 		E442C95D24C597F400A09177 /* ZoomShotAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZoomShotAnimationViewController.xib; sourceTree = "<group>"; };
 		E44EBCE124BFF25E0024FB6B /* TokenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenViewModel.swift; sourceTree = "<group>"; };
+		E450159F24C80CBF007D2CDC /* StatusCodePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodePlugin.swift; sourceTree = "<group>"; };
 		E4E37C5D24C13D1A00728508 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		E4E37C5F24C1517C00728508 /* TokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenViewController.swift; sourceTree = "<group>"; };
 		E4E37C6024C1517C00728508 /* TokenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TokenViewController.xib; sourceTree = "<group>"; };
@@ -1001,6 +1005,7 @@
 			isa = PBXGroup;
 			children = (
 				E858321923B854F1000CC046 /* CustomPluginType.swift */,
+				E450159F24C80CBF007D2CDC /* StatusCodePlugin.swift */,
 			);
 			path = Plugin;
 			sourceTree = "<group>";
@@ -1222,6 +1227,7 @@
 				124D7C4524931A3B008EEE24 /* RichTextViewController.xib */,
 				12578CC924972B000066AB76 /* PromiseViewController.swift */,
 				12578CCB249730800066AB76 /* PromiseViewController.xib */,
+				E4384CB624CAACCE00F78F81 /* PermissionsTableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1430,6 +1436,7 @@
 				E8154C1423A1E49500861A86 /* MineViewModel.swift in Sources */,
 				E82E6BC523B33BB300DB93C6 /* GoodsDetailCouponCell.swift in Sources */,
 				129293B02485EB8700320E21 /* SideslipTableViewCell.swift in Sources */,
+				E4384CB724CAACCE00F78F81 /* PermissionsTableViewController.swift in Sources */,
 				E8E48E0B238C02D700003B8A /* GitHubAPI.swift in Sources */,
 				E8A48AC023ACCA9100B53DBB /* GoodsModel.swift in Sources */,
 				E8A48DEB242C5B73008B34F1 /* OneParamViewController.swift in Sources */,
@@ -1544,6 +1551,7 @@
 				E82E6BB523B3350600DB93C6 /* GoodsDetailViewModel.swift in Sources */,
 				E8A48A8A23A9EF8000B53DBB /* UploadViewController.swift in Sources */,
 				E83ED23923ADAF160088B179 /* CouponAPI.swift in Sources */,
+				E45015A024C80CBF007D2CDC /* StatusCodePlugin.swift in Sources */,
 				E4E37C6124C1517C00728508 /* TokenViewController.swift in Sources */,
 				E8CDE3BE23BDED8400F762B7 /* UICollectionView+Extension.swift in Sources */,
 				E82E6BCD23B33DCB00DB93C6 /* GoodsInfo.swift in Sources */,

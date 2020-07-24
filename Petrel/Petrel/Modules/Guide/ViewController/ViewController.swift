@@ -32,7 +32,8 @@ class ViewController: UIViewController {
                 .animation,
                 .metal,
                 .richtext,
-                .promise ]
+                .promise,
+                .permissions ]
     }
     
     override func viewDidLoad() {
@@ -122,6 +123,11 @@ class ViewController: UIViewController {
                 let promise = PromiseViewController()
                 promise.hidesBottomBarWhenPushed = true
                 self?.navigationController?.pushViewController(promise, animated: true)
+            case .permissions:
+                let permission = PermissionsTableViewController()
+                permission.hidesBottomBarWhenPushed = true
+                self?.navigationController?.pushViewController(permission, animated: true)
+                break
             }
             }).disposed(by: disposeBag)
         
@@ -146,6 +152,7 @@ enum ItemType {
     case metal
     case richtext
     case promise
+    case permissions
 }
 
 extension ItemType {
@@ -181,6 +188,8 @@ extension ItemType {
             return "富文本"
         case .promise:
             return "异步编程库PromiseKit"
+        case .permissions:
+            return "权限管理"
         }
     }
 }

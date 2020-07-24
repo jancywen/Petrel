@@ -12,33 +12,6 @@ import Result
 import SVProgressHUD
 import SwiftyJSON
 
-///处理 特殊 http status code
-final class StatusCodePlugin: PluginType {
-    
-    func didReceive(_ result: Result<Response, MoyaError>, target: TargetType) {
-        
-        
-        print("处理code")
-        
-        guard case let Result.success(response) = result else { return }
-        guard let code = response.response?.statusCode else { return }
-        switch code {
-        case 200:
-            return
-        case 401:
-            // 跳登录页
-            
-            break
-        default:
-            if let message = try? JSON(data: response.data) {
-                if let msg = message["message"].string {
-                    SVProgressHUD.showError(withStatus: msg)
-                }
-            }
-        }
-    }
-}
-
 /// 请求过程HUD 吐出错误信息
 final class HUDPlugin: PluginType {
     func willSend(_ request: RequestType, target: TargetType) {
