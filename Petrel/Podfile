@@ -3,6 +3,17 @@ use_frameworks!
 
 target 'Petrel' do
 
+  
+  # only 64-bit build architecture from Pods targets
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |configuration|
+        target.build_settings(configuration.name)['ARCHS'] = 'arm64 arm64e'
+        target.build_settings(configuration.name)['VALID_ARCHS'] = 'arm64 arm64e'
+      end
+    end
+  end
+
   pod 'Moya/RxSwift'
   pod "Moya-SwiftyJSONMapper/RxSwift"
   pod 'RxCocoa'
@@ -59,4 +70,3 @@ pod 'SPPermissions/PhotoLibrary'
 #pod 'SPPermissions/Tracking'
 
 end
-
