@@ -38,6 +38,7 @@ target 'Petrel' do
   pod 'Kingfisher'
   # realm
 #  pod "RxRealm"
+  pod 'RealmSwift'
   
   # router
   pod 'URLNavigator'
