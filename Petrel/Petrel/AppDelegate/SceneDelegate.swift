@@ -20,8 +20,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         window = UIWindow(windowScene: scene as! UIWindowScene)
         window?.frame = UIScreen.main.bounds
-        let tbController = PetrelTabBarController()
-        window?.rootViewController = tbController
+//        let tbController = PetrelTabBarController()
+        let mainvc = ViewController()
+        mainvc.view.backgroundColor = .white
+        let main = UINavigationController(rootViewController: mainvc)
+
+        window?.rootViewController = main
         window?.makeKeyAndVisible()
 
     }

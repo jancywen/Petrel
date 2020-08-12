@@ -33,7 +33,8 @@ class ViewController: UIViewController {
                 .metal,
                 .richtext,
                 .promise,
-                .permissions ]
+                .permissions,
+                .cellAlign ]
     }
     
     override func viewDidLoad() {
@@ -128,6 +129,11 @@ class ViewController: UIViewController {
                 permission.hidesBottomBarWhenPushed = true
                 self?.navigationController?.pushViewController(permission, animated: true)
                 break
+            case .cellAlign:
+                let align = AlignViewController()
+                align.hidesBottomBarWhenPushed = true
+                self?.navigationController?.pushViewController(align, animated: true)
+                break
             }
             }).disposed(by: disposeBag)
         
@@ -153,6 +159,7 @@ enum ItemType {
     case richtext
     case promise
     case permissions
+    case cellAlign
 }
 
 extension ItemType {
@@ -190,6 +197,8 @@ extension ItemType {
             return "异步编程库PromiseKit"
         case .permissions:
             return "权限管理"
+        case .cellAlign:
+            return "cellAlign"
         }
     }
 }
