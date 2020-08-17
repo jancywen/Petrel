@@ -70,4 +70,6 @@ pod 'SPPermissions/PhotoLibrary'
 #pod 'SPPermissions/Bluetooth'
 #pod 'SPPermissions/Tracking'
 
+pod 'DZNEmptyDataSet'
+
 end

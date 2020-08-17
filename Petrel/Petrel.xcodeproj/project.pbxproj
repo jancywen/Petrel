@@ -44,6 +44,8 @@
 		E4E37C6F24C1804D00728508 /* MoyaProvider+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E37C6E24C1804D00728508 /* MoyaProvider+Rx.swift */; };
 		E4E37C7324C197B400728508 /* PetrelTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E37C7224C197B400728508 /* PetrelTargetType.swift */; };
 		E4E37C7624C19AE000728508 /* TokenAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E37C7524C19AE000728508 /* TokenAPI.swift */; };
+		E4F6B77024EA29BC0051FF0D /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6B76E24EA29BC0051FF0D /* EmptyViewController.swift */; };
+		E4F6B77124EA29BC0051FF0D /* EmptyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4F6B76F24EA29BC0051FF0D /* EmptyViewController.xib */; };
 		E80BA7202449B84E00474F9A /* AnimationIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BA71F2449B84E00474F9A /* AnimationIndexViewController.swift */; };
 		E80BA723244BFA5600474F9A /* AnimationListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BA722244BFA5600474F9A /* AnimationListModel.swift */; };
 		E80BA725244BFAD700474F9A /* AnimationEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BA724244BFAD700474F9A /* AnimationEnum.swift */; };
@@ -245,6 +247,8 @@
 		E4E37C6E24C1804D00728508 /* MoyaProvider+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Rx.swift"; sourceTree = "<group>"; };
 		E4E37C7224C197B400728508 /* PetrelTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetrelTargetType.swift; sourceTree = "<group>"; };
 		E4E37C7524C19AE000728508 /* TokenAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenAPI.swift; sourceTree = "<group>"; };
+		E4F6B76E24EA29BC0051FF0D /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		E4F6B76F24EA29BC0051FF0D /* EmptyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyViewController.xib; sourceTree = "<group>"; };
 		E80BA71F2449B84E00474F9A /* AnimationIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationIndexViewController.swift; sourceTree = "<group>"; };
 		E80BA722244BFA5600474F9A /* AnimationListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationListModel.swift; sourceTree = "<group>"; };
 		E80BA724244BFAD700474F9A /* AnimationEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationEnum.swift; sourceTree = "<group>"; };
@@ -1248,6 +1252,8 @@
 				12578CC924972B000066AB76 /* PromiseViewController.swift */,
 				12578CCB249730800066AB76 /* PromiseViewController.xib */,
 				E4384CB624CAACCE00F78F81 /* PermissionsTableViewController.swift */,
+				E4F6B76E24EA29BC0051FF0D /* EmptyViewController.swift */,
+				E4F6B76F24EA29BC0051FF0D /* EmptyViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1379,6 +1385,7 @@
 				E80CAC33245E7D9A00F1FFA0 /* Image.tga in Resources */,
 				E42EB12724C67D7500431E20 /* TransitionAnimationIndexViewController.xib in Resources */,
 				E442C95F24C597F400A09177 /* ZoomShotAnimationViewController.xib in Resources */,
+				E4F6B77124EA29BC0051FF0D /* EmptyViewController.xib in Resources */,
 				124D7C4724931A3B008EEE24 /* RichTextViewController.xib in Resources */,
 				129293B12485EB8700320E21 /* SideslipTableViewCell.xib in Resources */,
 				E82E6BBE23B33B1A00DB93C6 /* GoodsDetailContentCell.xib in Resources */,
@@ -1489,6 +1496,7 @@
 				E45840DE24E3E93A0057A9C4 /* AlignCollectionViewCell.swift in Sources */,
 				E8A48DEF242C5B92008B34F1 /* ModelToJsonViewController.swift in Sources */,
 				E8E48E01238BA73D00003B8A /* DouBanAPI.swift in Sources */,
+				E4F6B77024EA29BC0051FF0D /* EmptyViewController.swift in Sources */,
 				E45840E224E3E9C70057A9C4 /* AlignCellFlowLayout.swift in Sources */,
 				E8E48E1E238E523700003B8A /* Reactive+UILabel.swift in Sources */,
 				E82E6BD223B341BD00DB93C6 /* GoodsService.swift in Sources */,

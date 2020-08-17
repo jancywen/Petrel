@@ -34,7 +34,8 @@ class ViewController: UIViewController {
                 .richtext,
                 .promise,
                 .permissions,
-                .cellAlign ]
+                .cellAlign,
+                .noData ]
     }
     
     override func viewDidLoad() {
@@ -134,6 +135,8 @@ class ViewController: UIViewController {
                 align.hidesBottomBarWhenPushed = true
                 self?.navigationController?.pushViewController(align, animated: true)
                 break
+            case .noData:
+                self?.navigationController?.pushViewController(EmptyViewController(), animated: true)
             }
             }).disposed(by: disposeBag)
         
@@ -160,6 +163,7 @@ enum ItemType {
     case promise
     case permissions
     case cellAlign
+    case noData
 }
 
 extension ItemType {
@@ -199,6 +203,8 @@ extension ItemType {
             return "权限管理"
         case .cellAlign:
             return "cellAlign"
+        case .noData:
+            return "Empty"
         }
     }
 }
