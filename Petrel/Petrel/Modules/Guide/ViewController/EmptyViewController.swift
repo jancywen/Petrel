@@ -41,6 +41,18 @@ class EmptyViewController: UIViewController, DZNEmptyDataSetSource {
         }.disposed(by: disposeBag)
         
 
+        var str = "style margin-left: 129px;"
+        
+        let regex = try? NSRegularExpression(pattern: "margin-left:\\s*\\w*;", options: NSRegularExpression.Options.caseInsensitive)
+        
+        if let res = regex?.rangeOfFirstMatch(in: str, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, str.count)) {
+            
+            str.removeSubrange(Range(res, in: str)!)
+        }
+        
+        
+        print(str)
+        
         
     }
 
