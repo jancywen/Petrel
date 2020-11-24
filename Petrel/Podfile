@@ -36,7 +36,11 @@ target 'Petrel' do
 #
 #  pod 'GrowingTextView'
 
-pod 'JXSegmentedView'
+  pod 'JXSegmentedView'
+  
+  # websocket
+  pod 'Starscream', '~> 4.0.0'
+
 
 end
 
